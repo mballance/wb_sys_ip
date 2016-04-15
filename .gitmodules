@@ -1,0 +1,4 @@
+[submodule "memory_primitives"]
+	path = memory_primitives
+	url = https://github.com/mballance/memory_primitives.git
+	branch = master
