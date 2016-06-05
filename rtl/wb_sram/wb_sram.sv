@@ -29,7 +29,9 @@ module wb_sram #(
 			.NUM_DATA_BITS		(WB_DATA_WIDTH)
 		) u_sram_if();
 
-	wb_generic_byte_en_sram_bridge u_bridge (
+	wb_generic_byte_en_sram_bridge #(
+			.ADDRESS_WIDTH(MEM_ADDR_BITS), 
+			.DATA_WIDTH(WB_DATA_WIDTH)) u_bridge (
 		.clk     (clk    ), 
 		.rstn    (rstn   ), 
 		.wb_s    (s   ), 

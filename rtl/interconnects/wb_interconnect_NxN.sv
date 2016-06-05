@@ -50,7 +50,7 @@ module wb_interconnect_NxN #(
 	// Interface to the decode-fail slave
 //	wb_if				serr();
 
-	function reg[N_SLAVEID_BITS-1:0] addr2slave(
+	function reg[N_SLAVEID_BITS:0] addr2slave(
 		reg[N_MASTERID_BITS-1:0]	master,
 		reg[WB_ADDR_WIDTH-1:0] 		addr
 		);
@@ -66,7 +66,7 @@ module wb_interconnect_NxN #(
 				return N_SLAVES-(i/2)-1;
 			end
 		end
-		$display("Address 'h%08h - decode fail", addr);
+		$display("%t: Address 'h%08h - decode fail", $time, addr);
 		return (N_SLAVES);
 	endfunction
 	
@@ -94,6 +94,7 @@ module wb_interconnect_NxN #(
 							if (CYC[m_i] && STB[m_i]) begin
 								master_state[m_i] <= 1;
 								master_selected_slave[m_i] <= addr2slave(m_i, ADR[m_i]);
+//								$display("Master %0d => Slave %0d", m_i, addr2slave(m_i, ADR[m_i]));
 							end
 						end
 						
@@ -114,7 +115,7 @@ module wb_interconnect_NxN #(
 	generate
 		genvar m_req_i, m_req_j;
 
-		for (m_req_i=0; m_req_i < N_SLAVES; m_req_i++) begin : block_m_req_i
+		for (m_req_i=0; m_req_i <(N_SLAVES+1); m_req_i++) begin : block_m_req_i
 			for (m_req_j=0; m_req_j < N_MASTERS; m_req_j++) begin : block_m_req_j
 				assign master_slave_req[m_req_i][m_req_j] = (master_selected_slave[m_req_j] == m_req_i);
 			end
@@ -143,7 +144,7 @@ module wb_interconnect_NxN #(
 	generate
 		genvar s_am_i;
 		
-		for (s_am_i=0; s_am_i<N_SLAVES+1; s_am_i++) begin : block_s_am_i
+		for (s_am_i=0; s_am_i<(N_SLAVES+1); s_am_i++) begin : block_s_am_i
 			assign slave_active_master[s_am_i] =
 				(master_gnt[s_am_i])?master_gnt_id[s_am_i]:NO_MASTER;
 		end
@@ -183,6 +184,24 @@ module wb_interconnect_NxN #(
 			assign SWE[m2s_i] = (slave_active_master[m2s_i] == NO_MASTER)?0:WE[slave_active_master[m2s_i]];
 		end
 	endgenerate
+	
+	// Error slave
+	reg err_req;
+	always @(posedge clk) begin
+		if (rstn == 0) begin
+			err_req <= 0;
+		end else begin
+			if (SSTB[N_SLAVES] && SCYC[N_SLAVES] && !err_req) begin
+				err_req <= 1;
+			end else begin
+				err_req <= 0;
+			end
+		end
+	end
+	
+	assign SACK[N_SLAVES] = err_req;
+	assign SERR[N_SLAVES] = 1;
+	assign SDAT_R[N_SLAVES] = 'hdeadbeef;
 
 endmodule
 	

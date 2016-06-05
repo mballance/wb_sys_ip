@@ -1,5 +1,5 @@
 /****************************************************************************
- * wb_generic_byte_en_sram_bridge.sv
+ * wb_generic_line_en_sram_bridge.sv
  ****************************************************************************/
 
 /**
@@ -24,7 +24,7 @@ module wb_generic_line_en_sram_bridge #(
 			req <= 0;
 			req_1 <= 0;
 		end else begin
-			if (wb_s.CYC && wb_s.STB) begin
+			if (wb_s.CYC && wb_s.STB && !req) begin
 				req <= 1;
 			end else begin
 				req <= 0;
@@ -33,7 +33,9 @@ module wb_generic_line_en_sram_bridge #(
 		end
 	end
 	
-	assign sram_m.addr = wb_s.ADR[ADDRESS_WIDTH-1:(DATA_WIDTH/32)+1];
+	wire access = (sram_m.read_en || sram_m.write_en);
+	
+	assign sram_m.addr = (access)?wb_s.ADR[ADDRESS_WIDTH-1:(DATA_WIDTH/32)+1]:0;
 	assign sram_m.read_en = (wb_s.CYC & wb_s.STB & !wb_s.WE);
 	assign sram_m.write_en = (wb_s.CYC & wb_s.STB & wb_s.WE);
 	assign sram_m.write_data = wb_s.DAT_W;
