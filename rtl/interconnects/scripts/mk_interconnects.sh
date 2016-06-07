@@ -4,7 +4,7 @@ protocol=wb
 n_masters=1
 n_slaves=1
 n_masters_max=4
-n_slaves_max=4
+n_slaves_max=8
 
 echo "" > ${protocol}_interconnects.f
 echo "\${UNITS}/interconnects/${protocol}/${protocol}_interconnect_NxN.sv" >> \

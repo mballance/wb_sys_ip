@@ -33,6 +33,14 @@ ${WB_SYS_IP}/rtl/interconnects/wb_interconnect_4x3.sv
 ${WB_SYS_IP}/rtl/interconnects/wb_interconnect_4x3_pt.sv
 ${WB_SYS_IP}/rtl/interconnects/wb_interconnect_4x4.sv
 ${WB_SYS_IP}/rtl/interconnects/wb_interconnect_4x4_pt.sv
+${WB_SYS_IP}/rtl/interconnects/wb_interconnect_4x5.sv
+${WB_SYS_IP}/rtl/interconnects/wb_interconnect_4x5_pt.sv
+${WB_SYS_IP}/rtl/interconnects/wb_interconnect_4x6.sv
+${WB_SYS_IP}/rtl/interconnects/wb_interconnect_4x6_pt.sv
+${WB_SYS_IP}/rtl/interconnects/wb_interconnect_4x7.sv
+${WB_SYS_IP}/rtl/interconnects/wb_interconnect_4x7_pt.sv
+${WB_SYS_IP}/rtl/interconnects/wb_interconnect_4x8.sv
+${WB_SYS_IP}/rtl/interconnects/wb_interconnect_4x8_pt.sv
 ${WB_SYS_IP}/rtl/interconnects/wb_interconnect_NxN.sv
 ${WB_SYS_IP}/rtl/wb_rom/wb_rom.sv
 ${WB_SYS_IP}/rtl/wb_sram/wb_sram.sv
