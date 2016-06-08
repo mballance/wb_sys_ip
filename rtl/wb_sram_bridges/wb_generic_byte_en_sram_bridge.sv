@@ -40,7 +40,13 @@ module wb_generic_byte_en_sram_bridge #(
 		end
 	end
 	
-	assign sram_m.addr = wb_s.ADR[ADDRESS_WIDTH-1:(DATA_WIDTH/32)+1];
+	initial begin
+		$display("%m: ADDRESS_WIDTH=%0d DATA_WIDTH=%0d ADR[%0d:%0d]",
+				ADDRESS_WIDTH, DATA_WIDTH,
+				ADDRESS_WIDTH+(DATA_WIDTH/32),(DATA_WIDTH/32)+1);
+	end
+	
+	assign sram_m.addr = wb_s.ADR[ADDRESS_WIDTH+(DATA_WIDTH/32):(DATA_WIDTH/32)+1];
 	assign sram_m.read_en = (wb_s.CYC & wb_s.STB & !wb_s.WE);
 	assign sram_m.write_en = (wb_s.CYC & wb_s.STB & wb_s.WE);
 //	assign sram_m.read_en = (wb_s.CYC & wb_s.SEL & !wb_s.WE);
