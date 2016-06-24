@@ -199,9 +199,9 @@ module wb_interconnect_NxN #(
 		end
 	end
 	
-	assign SACK[N_SLAVES] = err_req;
-	assign SERR[N_SLAVES] = 1;
-	assign SDAT_R[N_SLAVES] = 'hdeadbeef;
+// TODO:	assign SACK[N_SLAVES] = err_req;
+//	assign SERR[N_SLAVES] = 1;
+//	assign SDAT_R[N_SLAVES] = 'hdeadbeef;
 
 endmodule
 	
