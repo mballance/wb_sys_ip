@@ -478,7 +478,7 @@ always @(posedge clk or posedge wb_rst_i)
 	else
 	if (wb_we_i && wb_addr_i==`UART_REG_LC)
 		lcr <= #1 wb_dat_i;
-
+	
 // Interrupt Enable Register or UART_DL2
 always @(posedge clk or posedge wb_rst_i)
 	if (wb_rst_i)

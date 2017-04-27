@@ -1,6 +1,7 @@
 /****************************************************************************
  * wb_uart.sv
  ****************************************************************************/
+`include "uart_defines.v"
 
 /**
  * Module: wb_uart
@@ -27,7 +28,7 @@ module wb_uart (
 	uart_top uart_top (
 		.wb_clk_i   (clk  ), 
 		.wb_rst_i   (!rstn  ), 
-		.wb_adr_i   (s.ADR  ), 
+		.wb_adr_i   (s.ADR), 
 		.wb_dat_i   (s.DAT_W  ), 
 		.wb_dat_o   (s.DAT_R  ), 
 		.wb_we_i    (s.WE   ), 

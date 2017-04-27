@@ -10,7 +10,8 @@
 module wb_sram #(
 		parameter int			MEM_ADDR_BITS=10,
 		parameter int			WB_ADDRESS_WIDTH=32,
-		parameter int			WB_DATA_WIDTH=32
+		parameter int			WB_DATA_WIDTH=32,
+		parameter				INIT_FILE=""
 		) (
 			input				clk,
 			input				rstn,
@@ -39,7 +40,8 @@ module wb_sram #(
 
 	generic_sram_byte_en_w #(
 		.MEM_ADDR_BITS  (MEM_ADDR_BITS ), 
-		.MEM_DATA_BITS  (WB_DATA_WIDTH )
+		.MEM_DATA_BITS  (WB_DATA_WIDTH ),
+		.INIT_FILE			(INIT_FILE)
 		) u_sram (
 		.i_clk          (clk         	  ), 
 		.s              (u_sram_if.sram   ));
