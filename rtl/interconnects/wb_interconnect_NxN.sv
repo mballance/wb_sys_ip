@@ -71,12 +71,12 @@ module wb_interconnect_NxN #(
 	endfunction
 	
 // Read request state machine
-	reg[3:0]									read_req_state[N_MASTERS-1:0];
+	reg[N_SLAVEID_BITS:0]									read_req_state[N_MASTERS-1:0];
 	reg[N_SLAVEID_BITS:0]						read_selected_slave[N_MASTERS-1:0];
 
 	// Master state machine
 	reg[2:0]						master_state[N_MASTERS-1:0];
-	reg[3:0]						master_selected_slave[N_MASTERS-1:0];
+	reg[N_SLAVEID_BITS:0]			master_selected_slave[N_MASTERS-1:0];
 	wire							master_gnt[N_SLAVES:0];
 	wire[$clog2(N_MASTERS)-1:0]		master_gnt_id[N_SLAVES:0];
 	wire[N_MASTERS-1:0]				master_slave_req[N_SLAVES:0];

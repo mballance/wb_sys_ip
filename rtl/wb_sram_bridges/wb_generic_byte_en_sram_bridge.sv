@@ -57,6 +57,8 @@ module wb_generic_byte_en_sram_bridge #(
 
 	assign wb_s.ACK = (sram_m.read_en)?req_1:req;
 	assign wb_s.ERR = 0; // no errors
+	
+	assign wb_s.TGD_R = 0;
 
 endmodule
 
