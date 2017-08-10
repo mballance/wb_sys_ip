@@ -6,3 +6,11 @@
 	path = std_protocol_if
 	url = https://github.com/mballance/std_protocol_if.git
 	branch = master
+[submodule "simscripts"]
+	path = simscripts
+	url = https://github.com/mballance/simscripts.git
+	branch = master
+[submodule "ve/sv_bfms"]
+	path = ve/sv_bfms
+	url = https://github.com/mballance/sv_bfms.git
+	branch = master
