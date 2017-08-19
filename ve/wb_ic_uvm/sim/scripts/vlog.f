@@ -2,6 +2,9 @@
 +incdir+${SIM_DIR_A}/../tb
 +incdir+${SIM_DIR_A}/../tests
 
+//+define+RANDOMIZE
+//+define+RANDOMIZE_REG_INIT
+
 -f ${SV_BFMS}/api/sv/sv.f
 
 -f ${STD_PROTOCOL_IF}/rtl/wb/wb.f

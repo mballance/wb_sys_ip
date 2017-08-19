@@ -21,8 +21,6 @@ class wb_ic_test_base extends uvm_test;
 	 * Override from class 
 	 */
 	virtual task run_phase(input uvm_phase phase);
-		phase.raise_objection(this, "Main");
-		
 	endtask
 
 	
