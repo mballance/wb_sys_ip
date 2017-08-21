@@ -126,6 +126,8 @@ module wb_ic_tb;
 	wire[31:0] io_addr_base_3 = 'h0000_3000;
 	wire[31:0] io_addr_limit_3 = 'h0000_3FFF;
 	
+	wire s_0_CYC;
+	
 	wishbone_ic_32_32_2x4 u_ic (
 		.clock            (clk           ), 
 		.reset            (~rstn           ), 
@@ -176,6 +178,7 @@ module wb_ic_tb;
 		.io_s_0_DAT_R     (ic2s0.DAT_R    ), 
 		.io_s_0_TGD_R     (ic2s0.TGD_R    ), 
 		.io_s_0_CYC       (ic2s0.CYC      ), 
+//		.io_s_0_CYC       (s_0_CYC      ), 
 		.io_s_0_TGC       (ic2s0.TGC      ), 
 		.io_s_0_ERR       (ic2s0.ERR      ), 
 		.io_s_0_SEL       (ic2s0.SEL      ), 
@@ -236,7 +239,11 @@ module wb_ic_tb;
 		
 		m0_cfg.vif = m0.u_core;
 		m1_cfg.vif = m1.u_core;
-		
+	
+		uvm_config_db #(wb_master_config_t)::set(uvm_top, "*m_m0_agent*", 
+				wb_master_config_t::report_id, m0_cfg);
+		uvm_config_db #(wb_master_config_t)::set(uvm_top, "*m_m1_agent*", 
+				wb_master_config_t::report_id, m1_cfg);
 		
 		
 		run_test();
