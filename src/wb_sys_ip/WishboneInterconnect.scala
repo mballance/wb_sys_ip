@@ -4,7 +4,6 @@ import chisel3._
 import chisel3.util._
 import std_protocol_if._
 import scopt.OptionParser
-import chisel3.util.ArbiterCtrl
 
 class WishboneInterconnectParameters(
     val N_MASTERS  : Int=1,

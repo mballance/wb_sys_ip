@@ -9,9 +9,12 @@ ${UVM_HOME}/src/uvm_pkg.sv
 
 -f ./std_protocol_if/rtl/rtl.f
 -F ./ve/wb_ic_uvm/sve.F
+-F ./ve/wb_test_master_uvm/sve.F
 -f ./ve/sv_bfms/sve.f
+-f ./rtl/rtl.f
 
 -f ${MEMORY_PRIMITIVES}/rtl/rtl_w.f
 -f ${MEMORY_PRIMITIVES}/rtl/sim/sim.f
 
 ${WB_SYS_IP}/wishbone_ic_32_32_2x4.v
+${WB_SYS_IP}/wishbone_test_master_32_32_4.v
