@@ -71,8 +71,6 @@ module wb_interconnect_NxN #(
 	endfunction
 	
 // Read request state machine
-	reg[N_SLAVEID_BITS:0]									read_req_state[N_MASTERS-1:0];
-	reg[N_SLAVEID_BITS:0]						read_selected_slave[N_MASTERS-1:0];
 
 	// Master state machine
 	reg[2:0]						master_state[N_MASTERS-1:0];
@@ -198,13 +196,7 @@ module wb_interconnect_NxN #(
 			end
 		end
 	end
-	
-// TODO:	assign SACK[N_SLAVES] = err_req;
-//	assign SERR[N_SLAVES] = 1;
-//	assign SDAT_R[N_SLAVES] = 'hdeadbeef;
-
 endmodule
-	
 
 module wb_NxN_arbiter #(
 		parameter int			N_REQ=2

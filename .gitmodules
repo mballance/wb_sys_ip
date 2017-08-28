@@ -14,3 +14,7 @@
 	path = ve/sv_bfms
 	url = https://github.com/mballance/sv_bfms.git
 	branch = master
+[submodule "synthscripts"]
+	path = synthscripts
+	url = https://github.com/mballance/synthscripts.git
+	branch = master

@@ -1,0 +1,5 @@
+run_root=/cygdrive/c/rundir/wb_sys_ip
+make: Entering directory '/cygdrive/c/rundir/wb_sys_ip/synth'
+make: /cygdrive/c/usr1/fun/chisel/wb_sys_ip/synth/scripts/Makefile: No such file or directory
+make: *** No rule to make target '/cygdrive/c/usr1/fun/chisel/wb_sys_ip/synth/scripts/Makefile'.  Stop.
+make: Leaving directory '/cygdrive/c/rundir/wb_sys_ip/synth'

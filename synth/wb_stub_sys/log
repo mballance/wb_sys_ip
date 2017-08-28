@@ -1,0 +1,798 @@
+Note: loading defaults from .synthscriptsrun_root=/cygdrive/c/rundir/wb_stub_sys
+run_root=/cygdrive/c/rundir/wb_stub_sys
+make: Entering directory '/cygdrive/c/rundir/wb_stub_sys/synth'
+echo "SYNTH_DIR=/cygdrive/c/usr1/fun/chisel/wb_sys_ip/synth/wb_stub_sys"
+SYNTH_DIR=/cygdrive/c/usr1/fun/chisel/wb_sys_ip/synth/wb_stub_sys
+quartus_sh -t C:/usr1/fun/chisel/wb_sys_ip/synthscripts/lib/altera/quartus_utils.tcl \
+	-project wb_stub_sys \
+	-top wb_stub_sys \
+	+define+FPGA \
+	wb_stub_sys.sdc \
+	-family "Cyclone V" \
+	-device "5CSXFC6D6F31C8ES" \
+	-f C:/usr1/fun/chisel/wb_sys_ip/synthscripts/lib/altera/quartus_common_settings.f \
+	-f C:/usr1/fun/chisel/wb_sys_ip/synth/wb_stub_sys/scripts/wb_stub_sys_quartus.f
+Info: *******************************************************************
+Info: Running Quartus Prime Shell
+    Info: Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
+    Info: Copyright (C) 2017  Intel Corporation. All rights reserved.
+    Info: Your use of Intel Corporation's design tools, logic functions 
+    Info: and other software and tools, and its AMPP partner logic 
+    Info: functions, and any output files from any of the foregoing 
+    Info: (including device programming or simulation files), and any 
+    Info: associated documentation or information are expressly subject 
+    Info: to the terms and conditions of the Intel Program License 
+    Info: Subscription Agreement, the Intel Quartus Prime License Agreement,
+    Info: the Intel MegaCore Function License Agreement, or other 
+    Info: applicable license agreement, including, without limitation, 
+    Info: that your use is for the sole purpose of programming logic 
+    Info: devices manufactured by Intel and sold by Intel or its 
+    Info: authorized distributors.  Please refer to the applicable 
+    Info: agreement for further details.
+    Info: Processing started: Mon Aug 28 16:40:25 2017
+Info: Command: quartus_sh -t C:/usr1/fun/chisel/wb_sys_ip/synthscripts/lib/altera/quartus_utils.tcl -project wb_stub_sys -top wb_stub_sys +define+FPGA wb_stub_sys.sdc -family "Cyclone V" -device 5CSXFC6D6F31C8ES -f C:/usr1/fun/chisel/wb_sys_ip/synthscripts/lib/altera/quartus_common_settings.f -f C:/usr1/fun/chisel/wb_sys_ip/synth/wb_stub_sys/scripts/wb_stub_sys_quartus.f
+Info: Quartus(args): -project wb_stub_sys -top wb_stub_sys +define+FPGA wb_stub_sys.sdc -family {Cyclone V} -device 5CSXFC6D6F31C8ES -f C:/usr1/fun/chisel/wb_sys_ip/synthscripts/lib/altera/quartus_common_settings.f -f C:/usr1/fun/chisel/wb_sys_ip/synth/wb_stub_sys/scripts/wb_stub_sys_quartus.f
+Note: Setting family Cyclone V
+Note: Setting device 5CSXFC6D6F31C8ES
+Note: add file path wb_stub_sys.sdc
+Note: add file path C:/usr1/fun/chisel/wb_sys_ip/memory_primitives/rtl/fpga/altsyncram/generic_rom.v
+Note: add file path C:/usr1/fun/chisel/wb_sys_ip/memory_primitives/rtl/fpga/altsyncram/generic_sram_byte_en.v
+Note: add file path C:/usr1/fun/chisel/wb_sys_ip/memory_primitives/rtl/fpga/altsyncram/generic_sram_line_en.v
+Note: add file path C:/usr1/fun/chisel/wb_sys_ip/memory_primitives/rtl/fpga/altsyncram/generic_sram_line_en_dualport.v
+Note: add file path C:/usr1/fun/chisel/wb_sys_ip/memory_primitives/rtl/generic_rom_w.sv
+Note: add file path C:/usr1/fun/chisel/wb_sys_ip/memory_primitives/rtl/generic_sram_byte_en_w.sv
+Note: add file path C:/usr1/fun/chisel/wb_sys_ip/memory_primitives/rtl/generic_sram_line_en_w.sv
+Note: add include path C:/usr1/fun/chisel/wb_sys_ip/std_protocol_if/rtl/wb
+Note: add file path C:/usr1/fun/chisel/wb_sys_ip/std_protocol_if/rtl/wb/wb_if.sv
+Note: add file path C:/usr1/fun/chisel/wb_sys_ip/std_protocol_if/rtl/wb/wb_master_stub.sv
+Note: add file path C:/usr1/fun/chisel/wb_sys_ip/std_protocol_if/rtl/wb/wb_slave_stub.sv
+Note: add include path C:/usr1/fun/chisel/wb_sys_ip/std_protocol_if/rtl/memory
+Note: add file path C:/usr1/fun/chisel/wb_sys_ip/std_protocol_if/rtl/memory/generic_sram_byte_en_if.sv
+Note: add file path C:/usr1/fun/chisel/wb_sys_ip/std_protocol_if/rtl/memory/generic_sram_line_en_if.sv
+Note: add file path C:/usr1/fun/chisel/wb_sys_ip/rtl/interconnects/wb_interconnect_1x1.sv
+Note: add file path C:/usr1/fun/chisel/wb_sys_ip/rtl/interconnects/wb_interconnect_1x1_pt.sv
+Note: add file path C:/usr1/fun/chisel/wb_sys_ip/rtl/interconnects/wb_interconnect_1x2.sv
+Note: add file path C:/usr1/fun/chisel/wb_sys_ip/rtl/interconnects/wb_interconnect_1x2_pt.sv
+Note: add file path C:/usr1/fun/chisel/wb_sys_ip/rtl/interconnects/wb_interconnect_1x3.sv
+Note: add file path C:/usr1/fun/chisel/wb_sys_ip/rtl/interconnects/wb_interconnect_1x3_pt.sv
+Note: add file path C:/usr1/fun/chisel/wb_sys_ip/rtl/interconnects/wb_interconnect_1x4.sv
+Note: add file path C:/usr1/fun/chisel/wb_sys_ip/rtl/interconnects/wb_interconnect_1x4_pt.sv
+Note: add file path C:/usr1/fun/chisel/wb_sys_ip/rtl/interconnects/wb_interconnect_2x1.sv
+Note: add file path C:/usr1/fun/chisel/wb_sys_ip/rtl/interconnects/wb_interconnect_2x1_pt.sv
+Note: add file path C:/usr1/fun/chisel/wb_sys_ip/rtl/interconnects/wb_interconnect_2x2.sv
+Note: add file path C:/usr1/fun/chisel/wb_sys_ip/rtl/interconnects/wb_interconnect_2x2_pt.sv
+Note: add file path C:/usr1/fun/chisel/wb_sys_ip/rtl/interconnects/wb_interconnect_2x3.sv
+Note: add file path C:/usr1/fun/chisel/wb_sys_ip/rtl/interconnects/wb_interconnect_2x3_pt.sv
+Note: add file path C:/usr1/fun/chisel/wb_sys_ip/rtl/interconnects/wb_interconnect_2x4.sv
+Note: add file path C:/usr1/fun/chisel/wb_sys_ip/rtl/interconnects/wb_interconnect_2x4_pt.sv
+Note: add file path C:/usr1/fun/chisel/wb_sys_ip/rtl/interconnects/wb_interconnect_3x1.sv
+Note: add file path C:/usr1/fun/chisel/wb_sys_ip/rtl/interconnects/wb_interconnect_3x1_pt.sv
+Note: add file path C:/usr1/fun/chisel/wb_sys_ip/rtl/interconnects/wb_interconnect_3x2.sv
+Note: add file path C:/usr1/fun/chisel/wb_sys_ip/rtl/interconnects/wb_interconnect_3x2_pt.sv
+Note: add file path C:/usr1/fun/chisel/wb_sys_ip/rtl/interconnects/wb_interconnect_3x3.sv
+Note: add file path C:/usr1/fun/chisel/wb_sys_ip/rtl/interconnects/wb_interconnect_3x3_pt.sv
+Note: add file path C:/usr1/fun/chisel/wb_sys_ip/rtl/interconnects/wb_interconnect_3x4.sv
+Note: add file path C:/usr1/fun/chisel/wb_sys_ip/rtl/interconnects/wb_interconnect_3x4_pt.sv
+Note: add file path C:/usr1/fun/chisel/wb_sys_ip/rtl/interconnects/wb_interconnect_4x1.sv
+Note: add file path C:/usr1/fun/chisel/wb_sys_ip/rtl/interconnects/wb_interconnect_4x1_pt.sv
+Note: add file path C:/usr1/fun/chisel/wb_sys_ip/rtl/interconnects/wb_interconnect_4x2.sv
+Note: add file path C:/usr1/fun/chisel/wb_sys_ip/rtl/interconnects/wb_interconnect_4x2_pt.sv
+Note: add file path C:/usr1/fun/chisel/wb_sys_ip/rtl/interconnects/wb_interconnect_4x3.sv
+Note: add file path C:/usr1/fun/chisel/wb_sys_ip/rtl/interconnects/wb_interconnect_4x3_pt.sv
+Note: add file path C:/usr1/fun/chisel/wb_sys_ip/rtl/interconnects/wb_interconnect_4x4.sv
+Note: add file path C:/usr1/fun/chisel/wb_sys_ip/rtl/interconnects/wb_interconnect_4x4_pt.sv
+Note: add file path C:/usr1/fun/chisel/wb_sys_ip/rtl/interconnects/wb_interconnect_4x5.sv
+Note: add file path C:/usr1/fun/chisel/wb_sys_ip/rtl/interconnects/wb_interconnect_4x5_pt.sv
+Note: add file path C:/usr1/fun/chisel/wb_sys_ip/rtl/interconnects/wb_interconnect_4x6.sv
+Note: add file path C:/usr1/fun/chisel/wb_sys_ip/rtl/interconnects/wb_interconnect_4x6_pt.sv
+Note: add file path C:/usr1/fun/chisel/wb_sys_ip/rtl/interconnects/wb_interconnect_4x7.sv
+Note: add file path C:/usr1/fun/chisel/wb_sys_ip/rtl/interconnects/wb_interconnect_4x7_pt.sv
+Note: add file path C:/usr1/fun/chisel/wb_sys_ip/rtl/interconnects/wb_interconnect_4x8.sv
+Note: add file path C:/usr1/fun/chisel/wb_sys_ip/rtl/interconnects/wb_interconnect_4x8_pt.sv
+Note: add file path C:/usr1/fun/chisel/wb_sys_ip/rtl/interconnects/wb_interconnect_NxN.sv
+Note: add file path C:/usr1/fun/chisel/wb_sys_ip/rtl/wb_rom/wb_rom.sv
+Note: add file path C:/usr1/fun/chisel/wb_sys_ip/rtl/wb_sram/wb_sram.sv
+Note: add file path C:/usr1/fun/chisel/wb_sys_ip/rtl/wb_sram_bridges/wb_generic_byte_en_sram_bridge.sv
+Note: add file path C:/usr1/fun/chisel/wb_sys_ip/rtl/wb_sram_bridges/wb_generic_line_en_sram_bridge.sv
+Note: add include path C:/usr1/fun/chisel/wb_sys_ip/rtl/wb_uart
+Note: add file path C:/usr1/fun/chisel/wb_sys_ip/rtl/wb_uart/raminfr.v
+Note: add file path C:/usr1/fun/chisel/wb_sys_ip/rtl/wb_uart/uart_debug_if.v
+Note: add file path C:/usr1/fun/chisel/wb_sys_ip/rtl/wb_uart/uart_receiver.v
+Note: add file path C:/usr1/fun/chisel/wb_sys_ip/rtl/wb_uart/uart_regs.v
+Note: add file path C:/usr1/fun/chisel/wb_sys_ip/rtl/wb_uart/uart_rfifo.v
+Note: add file path C:/usr1/fun/chisel/wb_sys_ip/rtl/wb_uart/uart_sync_flops.v
+Note: add file path C:/usr1/fun/chisel/wb_sys_ip/rtl/wb_uart/uart_tfifo.v
+Note: add file path C:/usr1/fun/chisel/wb_sys_ip/rtl/wb_uart/uart_top.v
+Note: add file path C:/usr1/fun/chisel/wb_sys_ip/rtl/wb_uart/uart_transmitter.v
+Note: add file path C:/usr1/fun/chisel/wb_sys_ip/rtl/wb_uart/uart_wb.v
+Note: add file path C:/usr1/fun/chisel/wb_sys_ip/rtl/wb_uart/wb_uart.sv
+Note: add file path C:/usr1/fun/chisel/wb_sys_ip/wishbone_ic_32_32_2x4.v
+Note: add file path C:/usr1/fun/chisel/wb_sys_ip/wishbone_test_master_32_32_4.v
+Note: add file path C:/usr1/fun/chisel/wb_sys_ip/synth/wb_stub_sys/wb_stub_sys.sv
+Info (23030): Evaluation of Tcl script C:/usr1/fun/chisel/wb_sys_ip/synthscripts/lib/altera/quartus_utils.tcl was successful
+Info: Quartus Prime Shell was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 526 megabytes
+    Info: Processing ended: Mon Aug 28 16:40:26 2017
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:00
+echo "copy_datafiles: /cygdrive/c/usr1/fun/chisel/wb_sys_ip/synth/wb_stub_sys/scripts/wb_stub_sys.sdc DST=/cygdrive/c/usr1/fun/chisel/wb_sys_ip/synth/wb_stub_sys/scripts/wb_stub_sys.sdc SRC=/cygdrive/c/usr1/fun/chisel/wb_sys_ip/synth/wb_stub_sys/scripts/wb_stub_sys.sdc"
+copy_datafiles: /cygdrive/c/usr1/fun/chisel/wb_sys_ip/synth/wb_stub_sys/scripts/wb_stub_sys.sdc DST=/cygdrive/c/usr1/fun/chisel/wb_sys_ip/synth/wb_stub_sys/scripts/wb_stub_sys.sdc SRC=/cygdrive/c/usr1/fun/chisel/wb_sys_ip/synth/wb_stub_sys/scripts/wb_stub_sys.sdc
+cd /cygdrive/c/rundir/wb_stub_sys/synth ; for spec in /cygdrive/c/usr1/fun/chisel/wb_sys_ip/synth/wb_stub_sys/scripts/wb_stub_sys.sdc; do \
+	src=`echo $spec | sed -e 's@\([^\s][^\s]*\)=[^\s][^\s]*@\1@g'` ; \
+	dst=`echo $spec | sed -e 's@[^\s][^\s]*=\([^\s][^\s]*\)@\1@g'` ; \
+	echo "src=$src dst=$dst" ; \
+	if test "$src" = "$dst"; then \
+		name=`basename $src`; \
+		if test "$src" != "/cygdrive/c/rundir/wb_stub_sys/synth/$name"; then \
+			cp $src . ; \
+			echo "Note: Copying datafile $src to the build directory"; \
+		else \
+			echo "Note: Datafile $name already in the build directory"; \
+		fi \
+	else \
+		echo "Note: Copying datafile $src to $dst in the build directory"; \
+		cp $src $dst ; \
+	fi \
+done
+src=/cygdrive/c/usr1/fun/chisel/wb_sys_ip/synth/wb_stub_sys/scripts/wb_stub_sys.sdc dst=/cygdrive/c/usr1/fun/chisel/wb_sys_ip/synth/wb_stub_sys/scripts/wb_stub_sys.sdc
+Note: Copying datafile /cygdrive/c/usr1/fun/chisel/wb_sys_ip/synth/wb_stub_sys/scripts/wb_stub_sys.sdc to the build directory
+quartus_map wb_stub_sys
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
+    Info: Copyright (C) 2017  Intel Corporation. All rights reserved.
+    Info: Your use of Intel Corporation's design tools, logic functions 
+    Info: and other software and tools, and its AMPP partner logic 
+    Info: functions, and any output files from any of the foregoing 
+    Info: (including device programming or simulation files), and any 
+    Info: associated documentation or information are expressly subject 
+    Info: to the terms and conditions of the Intel Program License 
+    Info: Subscription Agreement, the Intel Quartus Prime License Agreement,
+    Info: the Intel MegaCore Function License Agreement, or other 
+    Info: applicable license agreement, including, without limitation, 
+    Info: that your use is for the sole purpose of programming logic 
+    Info: devices manufactured by Intel and sold by Intel or its 
+    Info: authorized distributors.  Please refer to the applicable 
+    Info: agreement for further details.
+    Info: Processing started: Mon Aug 28 16:40:27 2017
+Info: Command: quartus_map wb_stub_sys
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file /usr1/fun/chisel/wb_sys_ip/memory_primitives/rtl/fpga/altsyncram/generic_rom.v
+    Info (12023): Found entity 1: generic_rom File: C:/usr1/fun/chisel/wb_sys_ip/memory_primitives/rtl/fpga/altsyncram/generic_rom.v Line: 11
+Info (12021): Found 1 design units, including 1 entities, in source file /usr1/fun/chisel/wb_sys_ip/memory_primitives/rtl/fpga/altsyncram/generic_sram_byte_en.v
+    Info (12023): Found entity 1: generic_sram_byte_en File: C:/usr1/fun/chisel/wb_sys_ip/memory_primitives/rtl/fpga/altsyncram/generic_sram_byte_en.v Line: 6
+Info (12021): Found 1 design units, including 1 entities, in source file /usr1/fun/chisel/wb_sys_ip/memory_primitives/rtl/fpga/altsyncram/generic_sram_line_en.v
+    Info (12023): Found entity 1: generic_sram_line_en File: C:/usr1/fun/chisel/wb_sys_ip/memory_primitives/rtl/fpga/altsyncram/generic_sram_line_en.v Line: 6
+Info (12021): Found 1 design units, including 1 entities, in source file /usr1/fun/chisel/wb_sys_ip/memory_primitives/rtl/fpga/altsyncram/generic_sram_line_en_dualport.v
+    Info (12023): Found entity 1: generic_sram_line_en_dualport File: C:/usr1/fun/chisel/wb_sys_ip/memory_primitives/rtl/fpga/altsyncram/generic_sram_line_en_dualport.v Line: 6
+Info (12021): Found 1 design units, including 1 entities, in source file /usr1/fun/chisel/wb_sys_ip/memory_primitives/rtl/generic_rom_w.sv
+    Info (12023): Found entity 1: generic_rom_w File: C:/usr1/fun/chisel/wb_sys_ip/memory_primitives/rtl/generic_rom_w.sv Line: 10
+Info (12021): Found 1 design units, including 1 entities, in source file /usr1/fun/chisel/wb_sys_ip/memory_primitives/rtl/generic_sram_byte_en_w.sv
+    Info (12023): Found entity 1: generic_sram_byte_en_w File: C:/usr1/fun/chisel/wb_sys_ip/memory_primitives/rtl/generic_sram_byte_en_w.sv Line: 10
+Info (12021): Found 1 design units, including 1 entities, in source file /usr1/fun/chisel/wb_sys_ip/memory_primitives/rtl/generic_sram_line_en_w.sv
+    Info (12023): Found entity 1: generic_sram_line_en_w File: C:/usr1/fun/chisel/wb_sys_ip/memory_primitives/rtl/generic_sram_line_en_w.sv Line: 10
+Info (12021): Found 1 design units, including 1 entities, in source file /usr1/fun/chisel/wb_sys_ip/std_protocol_if/rtl/wb/wb_if.sv
+    Info (12023): Found entity 1: wb_if File: C:/usr1/fun/chisel/wb_sys_ip/std_protocol_if/rtl/wb/wb_if.sv Line: 10
+Info (12021): Found 1 design units, including 1 entities, in source file /usr1/fun/chisel/wb_sys_ip/std_protocol_if/rtl/wb/wb_master_stub.sv
+    Info (12023): Found entity 1: wb_master_stub File: C:/usr1/fun/chisel/wb_sys_ip/std_protocol_if/rtl/wb/wb_master_stub.sv Line: 11
+Info (12021): Found 1 design units, including 1 entities, in source file /usr1/fun/chisel/wb_sys_ip/std_protocol_if/rtl/wb/wb_slave_stub.sv
+    Info (12023): Found entity 1: wb_slave_stub File: C:/usr1/fun/chisel/wb_sys_ip/std_protocol_if/rtl/wb/wb_slave_stub.sv Line: 10
+Info (12021): Found 1 design units, including 1 entities, in source file /usr1/fun/chisel/wb_sys_ip/std_protocol_if/rtl/memory/generic_sram_byte_en_if.sv
+    Info (12023): Found entity 1: generic_sram_byte_en_if File: C:/usr1/fun/chisel/wb_sys_ip/std_protocol_if/rtl/memory/generic_sram_byte_en_if.sv Line: 10
+Info (12021): Found 1 design units, including 1 entities, in source file /usr1/fun/chisel/wb_sys_ip/std_protocol_if/rtl/memory/generic_sram_line_en_if.sv
+    Info (12023): Found entity 1: generic_sram_line_en_if File: C:/usr1/fun/chisel/wb_sys_ip/std_protocol_if/rtl/memory/generic_sram_line_en_if.sv Line: 10
+Info (12021): Found 1 design units, including 1 entities, in source file /usr1/fun/chisel/wb_sys_ip/rtl/interconnects/wb_interconnect_1x1.sv
+    Info (12023): Found entity 1: wb_interconnect_1x1 File: C:/usr1/fun/chisel/wb_sys_ip/rtl/interconnects/wb_interconnect_1x1.sv Line: 10
+Info (12021): Found 1 design units, including 1 entities, in source file /usr1/fun/chisel/wb_sys_ip/rtl/interconnects/wb_interconnect_1x1_pt.sv
+    Info (12023): Found entity 1: wb_interconnect_1x1_pt File: C:/usr1/fun/chisel/wb_sys_ip/rtl/interconnects/wb_interconnect_1x1_pt.sv Line: 10
+Info (12021): Found 1 design units, including 1 entities, in source file /usr1/fun/chisel/wb_sys_ip/rtl/interconnects/wb_interconnect_1x2.sv
+    Info (12023): Found entity 1: wb_interconnect_1x2 File: C:/usr1/fun/chisel/wb_sys_ip/rtl/interconnects/wb_interconnect_1x2.sv Line: 10
+Info (12021): Found 1 design units, including 1 entities, in source file /usr1/fun/chisel/wb_sys_ip/rtl/interconnects/wb_interconnect_1x2_pt.sv
+    Info (12023): Found entity 1: wb_interconnect_1x2_pt File: C:/usr1/fun/chisel/wb_sys_ip/rtl/interconnects/wb_interconnect_1x2_pt.sv Line: 10
+Info (12021): Found 1 design units, including 1 entities, in source file /usr1/fun/chisel/wb_sys_ip/rtl/interconnects/wb_interconnect_1x3.sv
+    Info (12023): Found entity 1: wb_interconnect_1x3 File: C:/usr1/fun/chisel/wb_sys_ip/rtl/interconnects/wb_interconnect_1x3.sv Line: 10
+Info (12021): Found 1 design units, including 1 entities, in source file /usr1/fun/chisel/wb_sys_ip/rtl/interconnects/wb_interconnect_1x3_pt.sv
+    Info (12023): Found entity 1: wb_interconnect_1x3_pt File: C:/usr1/fun/chisel/wb_sys_ip/rtl/interconnects/wb_interconnect_1x3_pt.sv Line: 10
+Info (12021): Found 1 design units, including 1 entities, in source file /usr1/fun/chisel/wb_sys_ip/rtl/interconnects/wb_interconnect_1x4.sv
+    Info (12023): Found entity 1: wb_interconnect_1x4 File: C:/usr1/fun/chisel/wb_sys_ip/rtl/interconnects/wb_interconnect_1x4.sv Line: 10
+Info (12021): Found 1 design units, including 1 entities, in source file /usr1/fun/chisel/wb_sys_ip/rtl/interconnects/wb_interconnect_1x4_pt.sv
+    Info (12023): Found entity 1: wb_interconnect_1x4_pt File: C:/usr1/fun/chisel/wb_sys_ip/rtl/interconnects/wb_interconnect_1x4_pt.sv Line: 10
+Info (12021): Found 1 design units, including 1 entities, in source file /usr1/fun/chisel/wb_sys_ip/rtl/interconnects/wb_interconnect_2x1.sv
+    Info (12023): Found entity 1: wb_interconnect_2x1 File: C:/usr1/fun/chisel/wb_sys_ip/rtl/interconnects/wb_interconnect_2x1.sv Line: 10
+Info (12021): Found 1 design units, including 1 entities, in source file /usr1/fun/chisel/wb_sys_ip/rtl/interconnects/wb_interconnect_2x1_pt.sv
+    Info (12023): Found entity 1: wb_interconnect_2x1_pt File: C:/usr1/fun/chisel/wb_sys_ip/rtl/interconnects/wb_interconnect_2x1_pt.sv Line: 10
+Info (12021): Found 1 design units, including 1 entities, in source file /usr1/fun/chisel/wb_sys_ip/rtl/interconnects/wb_interconnect_2x2.sv
+    Info (12023): Found entity 1: wb_interconnect_2x2 File: C:/usr1/fun/chisel/wb_sys_ip/rtl/interconnects/wb_interconnect_2x2.sv Line: 10
+Info (12021): Found 1 design units, including 1 entities, in source file /usr1/fun/chisel/wb_sys_ip/rtl/interconnects/wb_interconnect_2x2_pt.sv
+    Info (12023): Found entity 1: wb_interconnect_2x2_pt File: C:/usr1/fun/chisel/wb_sys_ip/rtl/interconnects/wb_interconnect_2x2_pt.sv Line: 10
+Info (12021): Found 1 design units, including 1 entities, in source file /usr1/fun/chisel/wb_sys_ip/rtl/interconnects/wb_interconnect_2x3.sv
+    Info (12023): Found entity 1: wb_interconnect_2x3 File: C:/usr1/fun/chisel/wb_sys_ip/rtl/interconnects/wb_interconnect_2x3.sv Line: 10
+Info (12021): Found 1 design units, including 1 entities, in source file /usr1/fun/chisel/wb_sys_ip/rtl/interconnects/wb_interconnect_2x3_pt.sv
+    Info (12023): Found entity 1: wb_interconnect_2x3_pt File: C:/usr1/fun/chisel/wb_sys_ip/rtl/interconnects/wb_interconnect_2x3_pt.sv Line: 10
+Info (12021): Found 1 design units, including 1 entities, in source file /usr1/fun/chisel/wb_sys_ip/rtl/interconnects/wb_interconnect_2x4.sv
+    Info (12023): Found entity 1: wb_interconnect_2x4 File: C:/usr1/fun/chisel/wb_sys_ip/rtl/interconnects/wb_interconnect_2x4.sv Line: 10
+Info (12021): Found 1 design units, including 1 entities, in source file /usr1/fun/chisel/wb_sys_ip/rtl/interconnects/wb_interconnect_2x4_pt.sv
+    Info (12023): Found entity 1: wb_interconnect_2x4_pt File: C:/usr1/fun/chisel/wb_sys_ip/rtl/interconnects/wb_interconnect_2x4_pt.sv Line: 10
+Info (12021): Found 1 design units, including 1 entities, in source file /usr1/fun/chisel/wb_sys_ip/rtl/interconnects/wb_interconnect_3x1.sv
+    Info (12023): Found entity 1: wb_interconnect_3x1 File: C:/usr1/fun/chisel/wb_sys_ip/rtl/interconnects/wb_interconnect_3x1.sv Line: 10
+Info (12021): Found 1 design units, including 1 entities, in source file /usr1/fun/chisel/wb_sys_ip/rtl/interconnects/wb_interconnect_3x1_pt.sv
+    Info (12023): Found entity 1: wb_interconnect_3x1_pt File: C:/usr1/fun/chisel/wb_sys_ip/rtl/interconnects/wb_interconnect_3x1_pt.sv Line: 10
+Info (12021): Found 1 design units, including 1 entities, in source file /usr1/fun/chisel/wb_sys_ip/rtl/interconnects/wb_interconnect_3x2.sv
+    Info (12023): Found entity 1: wb_interconnect_3x2 File: C:/usr1/fun/chisel/wb_sys_ip/rtl/interconnects/wb_interconnect_3x2.sv Line: 10
+Info (12021): Found 1 design units, including 1 entities, in source file /usr1/fun/chisel/wb_sys_ip/rtl/interconnects/wb_interconnect_3x2_pt.sv
+    Info (12023): Found entity 1: wb_interconnect_3x2_pt File: C:/usr1/fun/chisel/wb_sys_ip/rtl/interconnects/wb_interconnect_3x2_pt.sv Line: 10
+Info (12021): Found 1 design units, including 1 entities, in source file /usr1/fun/chisel/wb_sys_ip/rtl/interconnects/wb_interconnect_3x3.sv
+    Info (12023): Found entity 1: wb_interconnect_3x3 File: C:/usr1/fun/chisel/wb_sys_ip/rtl/interconnects/wb_interconnect_3x3.sv Line: 10
+Info (12021): Found 1 design units, including 1 entities, in source file /usr1/fun/chisel/wb_sys_ip/rtl/interconnects/wb_interconnect_3x3_pt.sv
+    Info (12023): Found entity 1: wb_interconnect_3x3_pt File: C:/usr1/fun/chisel/wb_sys_ip/rtl/interconnects/wb_interconnect_3x3_pt.sv Line: 10
+Info (12021): Found 1 design units, including 1 entities, in source file /usr1/fun/chisel/wb_sys_ip/rtl/interconnects/wb_interconnect_3x4.sv
+    Info (12023): Found entity 1: wb_interconnect_3x4 File: C:/usr1/fun/chisel/wb_sys_ip/rtl/interconnects/wb_interconnect_3x4.sv Line: 10
+Info (12021): Found 1 design units, including 1 entities, in source file /usr1/fun/chisel/wb_sys_ip/rtl/interconnects/wb_interconnect_3x4_pt.sv
+    Info (12023): Found entity 1: wb_interconnect_3x4_pt File: C:/usr1/fun/chisel/wb_sys_ip/rtl/interconnects/wb_interconnect_3x4_pt.sv Line: 10
+Info (12021): Found 1 design units, including 1 entities, in source file /usr1/fun/chisel/wb_sys_ip/rtl/interconnects/wb_interconnect_4x1.sv
+    Info (12023): Found entity 1: wb_interconnect_4x1 File: C:/usr1/fun/chisel/wb_sys_ip/rtl/interconnects/wb_interconnect_4x1.sv Line: 10
+Info (12021): Found 1 design units, including 1 entities, in source file /usr1/fun/chisel/wb_sys_ip/rtl/interconnects/wb_interconnect_4x1_pt.sv
+    Info (12023): Found entity 1: wb_interconnect_4x1_pt File: C:/usr1/fun/chisel/wb_sys_ip/rtl/interconnects/wb_interconnect_4x1_pt.sv Line: 10
+Info (12021): Found 1 design units, including 1 entities, in source file /usr1/fun/chisel/wb_sys_ip/rtl/interconnects/wb_interconnect_4x2.sv
+    Info (12023): Found entity 1: wb_interconnect_4x2 File: C:/usr1/fun/chisel/wb_sys_ip/rtl/interconnects/wb_interconnect_4x2.sv Line: 10
+Info (12021): Found 1 design units, including 1 entities, in source file /usr1/fun/chisel/wb_sys_ip/rtl/interconnects/wb_interconnect_4x2_pt.sv
+    Info (12023): Found entity 1: wb_interconnect_4x2_pt File: C:/usr1/fun/chisel/wb_sys_ip/rtl/interconnects/wb_interconnect_4x2_pt.sv Line: 10
+Info (12021): Found 1 design units, including 1 entities, in source file /usr1/fun/chisel/wb_sys_ip/rtl/interconnects/wb_interconnect_4x3.sv
+    Info (12023): Found entity 1: wb_interconnect_4x3 File: C:/usr1/fun/chisel/wb_sys_ip/rtl/interconnects/wb_interconnect_4x3.sv Line: 10
+Info (12021): Found 1 design units, including 1 entities, in source file /usr1/fun/chisel/wb_sys_ip/rtl/interconnects/wb_interconnect_4x3_pt.sv
+    Info (12023): Found entity 1: wb_interconnect_4x3_pt File: C:/usr1/fun/chisel/wb_sys_ip/rtl/interconnects/wb_interconnect_4x3_pt.sv Line: 10
+Info (12021): Found 1 design units, including 1 entities, in source file /usr1/fun/chisel/wb_sys_ip/rtl/interconnects/wb_interconnect_4x4.sv
+    Info (12023): Found entity 1: wb_interconnect_4x4 File: C:/usr1/fun/chisel/wb_sys_ip/rtl/interconnects/wb_interconnect_4x4.sv Line: 10
+Info (12021): Found 1 design units, including 1 entities, in source file /usr1/fun/chisel/wb_sys_ip/rtl/interconnects/wb_interconnect_4x4_pt.sv
+    Info (12023): Found entity 1: wb_interconnect_4x4_pt File: C:/usr1/fun/chisel/wb_sys_ip/rtl/interconnects/wb_interconnect_4x4_pt.sv Line: 10
+Info (12021): Found 1 design units, including 1 entities, in source file /usr1/fun/chisel/wb_sys_ip/rtl/interconnects/wb_interconnect_4x5.sv
+    Info (12023): Found entity 1: wb_interconnect_4x5 File: C:/usr1/fun/chisel/wb_sys_ip/rtl/interconnects/wb_interconnect_4x5.sv Line: 10
+Info (12021): Found 1 design units, including 1 entities, in source file /usr1/fun/chisel/wb_sys_ip/rtl/interconnects/wb_interconnect_4x5_pt.sv
+    Info (12023): Found entity 1: wb_interconnect_4x5_pt File: C:/usr1/fun/chisel/wb_sys_ip/rtl/interconnects/wb_interconnect_4x5_pt.sv Line: 10
+Info (12021): Found 1 design units, including 1 entities, in source file /usr1/fun/chisel/wb_sys_ip/rtl/interconnects/wb_interconnect_4x6.sv
+    Info (12023): Found entity 1: wb_interconnect_4x6 File: C:/usr1/fun/chisel/wb_sys_ip/rtl/interconnects/wb_interconnect_4x6.sv Line: 10
+Info (12021): Found 1 design units, including 1 entities, in source file /usr1/fun/chisel/wb_sys_ip/rtl/interconnects/wb_interconnect_4x6_pt.sv
+    Info (12023): Found entity 1: wb_interconnect_4x6_pt File: C:/usr1/fun/chisel/wb_sys_ip/rtl/interconnects/wb_interconnect_4x6_pt.sv Line: 10
+Info (12021): Found 1 design units, including 1 entities, in source file /usr1/fun/chisel/wb_sys_ip/rtl/interconnects/wb_interconnect_4x7.sv
+    Info (12023): Found entity 1: wb_interconnect_4x7 File: C:/usr1/fun/chisel/wb_sys_ip/rtl/interconnects/wb_interconnect_4x7.sv Line: 10
+Info (12021): Found 1 design units, including 1 entities, in source file /usr1/fun/chisel/wb_sys_ip/rtl/interconnects/wb_interconnect_4x7_pt.sv
+    Info (12023): Found entity 1: wb_interconnect_4x7_pt File: C:/usr1/fun/chisel/wb_sys_ip/rtl/interconnects/wb_interconnect_4x7_pt.sv Line: 10
+Info (12021): Found 1 design units, including 1 entities, in source file /usr1/fun/chisel/wb_sys_ip/rtl/interconnects/wb_interconnect_4x8.sv
+    Info (12023): Found entity 1: wb_interconnect_4x8 File: C:/usr1/fun/chisel/wb_sys_ip/rtl/interconnects/wb_interconnect_4x8.sv Line: 10
+Info (12021): Found 1 design units, including 1 entities, in source file /usr1/fun/chisel/wb_sys_ip/rtl/interconnects/wb_interconnect_4x8_pt.sv
+    Info (12023): Found entity 1: wb_interconnect_4x8_pt File: C:/usr1/fun/chisel/wb_sys_ip/rtl/interconnects/wb_interconnect_4x8_pt.sv Line: 10
+Info (12021): Found 2 design units, including 2 entities, in source file /usr1/fun/chisel/wb_sys_ip/rtl/interconnects/wb_interconnect_nxn.sv
+    Info (12023): Found entity 1: wb_interconnect_NxN File: C:/usr1/fun/chisel/wb_sys_ip/rtl/interconnects/wb_interconnect_NxN.sv Line: 10
+    Info (12023): Found entity 2: wb_NxN_arbiter File: C:/usr1/fun/chisel/wb_sys_ip/rtl/interconnects/wb_interconnect_NxN.sv Line: 201
+Info (12021): Found 1 design units, including 1 entities, in source file /usr1/fun/chisel/wb_sys_ip/rtl/wb_rom/wb_rom.sv
+    Info (12023): Found entity 1: wb_rom File: C:/usr1/fun/chisel/wb_sys_ip/rtl/wb_rom/wb_rom.sv Line: 10
+Info (12021): Found 1 design units, including 1 entities, in source file /usr1/fun/chisel/wb_sys_ip/rtl/wb_sram/wb_sram.sv
+    Info (12023): Found entity 1: wb_sram File: C:/usr1/fun/chisel/wb_sys_ip/rtl/wb_sram/wb_sram.sv Line: 10
+Info (12021): Found 1 design units, including 1 entities, in source file /usr1/fun/chisel/wb_sys_ip/rtl/wb_sram_bridges/wb_generic_byte_en_sram_bridge.sv
+    Info (12023): Found entity 1: wb_generic_byte_en_sram_bridge File: C:/usr1/fun/chisel/wb_sys_ip/rtl/wb_sram_bridges/wb_generic_byte_en_sram_bridge.sv Line: 10
+Info (12021): Found 1 design units, including 1 entities, in source file /usr1/fun/chisel/wb_sys_ip/rtl/wb_sram_bridges/wb_generic_line_en_sram_bridge.sv
+    Info (12023): Found entity 1: wb_generic_line_en_sram_bridge File: C:/usr1/fun/chisel/wb_sys_ip/rtl/wb_sram_bridges/wb_generic_line_en_sram_bridge.sv Line: 10
+Info (12021): Found 1 design units, including 1 entities, in source file /usr1/fun/chisel/wb_sys_ip/rtl/wb_uart/raminfr.v
+    Info (12023): Found entity 1: raminfr File: C:/usr1/fun/chisel/wb_sys_ip/rtl/wb_uart/raminfr.v Line: 83
+Info (12021): Found 1 design units, including 1 entities, in source file /usr1/fun/chisel/wb_sys_ip/rtl/wb_uart/uart_debug_if.v
+    Info (12023): Found entity 1: uart_debug_if File: C:/usr1/fun/chisel/wb_sys_ip/rtl/wb_uart/uart_debug_if.v Line: 89
+Info (12021): Found 1 design units, including 1 entities, in source file /usr1/fun/chisel/wb_sys_ip/rtl/wb_uart/uart_receiver.v
+    Info (12023): Found entity 1: uart_receiver File: C:/usr1/fun/chisel/wb_sys_ip/rtl/wb_uart/uart_receiver.v Line: 198
+Info (12021): Found 1 design units, including 1 entities, in source file /usr1/fun/chisel/wb_sys_ip/rtl/wb_uart/uart_regs.v
+    Info (12023): Found entity 1: uart_regs File: C:/usr1/fun/chisel/wb_sys_ip/rtl/wb_uart/uart_regs.v Line: 231
+Info (12021): Found 1 design units, including 1 entities, in source file /usr1/fun/chisel/wb_sys_ip/rtl/wb_uart/uart_rfifo.v
+    Info (12023): Found entity 1: uart_rfifo File: C:/usr1/fun/chisel/wb_sys_ip/rtl/wb_uart/uart_rfifo.v Line: 150
+Info (12021): Found 1 design units, including 1 entities, in source file /usr1/fun/chisel/wb_sys_ip/rtl/wb_uart/uart_sync_flops.v
+    Info (12023): Found entity 1: uart_sync_flops File: C:/usr1/fun/chisel/wb_sys_ip/rtl/wb_uart/uart_sync_flops.v Line: 71
+Info (12021): Found 1 design units, including 1 entities, in source file /usr1/fun/chisel/wb_sys_ip/rtl/wb_uart/uart_tfifo.v
+    Info (12023): Found entity 1: uart_tfifo File: C:/usr1/fun/chisel/wb_sys_ip/rtl/wb_uart/uart_tfifo.v Line: 144
+Info (12021): Found 1 design units, including 1 entities, in source file /usr1/fun/chisel/wb_sys_ip/rtl/wb_uart/uart_top.v
+    Info (12023): Found entity 1: uart_top File: C:/usr1/fun/chisel/wb_sys_ip/rtl/wb_uart/uart_top.v Line: 140
+Info (12021): Found 1 design units, including 1 entities, in source file /usr1/fun/chisel/wb_sys_ip/rtl/wb_uart/uart_transmitter.v
+    Info (12023): Found entity 1: uart_transmitter File: C:/usr1/fun/chisel/wb_sys_ip/rtl/wb_uart/uart_transmitter.v Line: 154
+Info (12021): Found 1 design units, including 1 entities, in source file /usr1/fun/chisel/wb_sys_ip/rtl/wb_uart/uart_wb.v
+    Info (12023): Found entity 1: uart_wb File: C:/usr1/fun/chisel/wb_sys_ip/rtl/wb_uart/uart_wb.v Line: 142
+Info (12021): Found 1 design units, including 1 entities, in source file /usr1/fun/chisel/wb_sys_ip/rtl/wb_uart/wb_uart.sv
+    Info (12023): Found entity 1: wb_uart File: C:/usr1/fun/chisel/wb_sys_ip/rtl/wb_uart/wb_uart.sv Line: 11
+Info (12021): Found 2 design units, including 2 entities, in source file /usr1/fun/chisel/wb_sys_ip/wishbone_ic_32_32_2x4.v
+    Info (12023): Found entity 1: LockingRRArbiter File: C:/usr1/fun/chisel/wb_sys_ip/wishbone_ic_32_32_2x4.v Line: 14
+    Info (12023): Found entity 2: wishbone_ic_32_32_2x4 File: C:/usr1/fun/chisel/wb_sys_ip/wishbone_ic_32_32_2x4.v Line: 191
+Info (12021): Found 1 design units, including 1 entities, in source file /usr1/fun/chisel/wb_sys_ip/wishbone_test_master_32_32_4.v
+    Info (12023): Found entity 1: wishbone_test_master_32_32_4 File: C:/usr1/fun/chisel/wb_sys_ip/wishbone_test_master_32_32_4.v Line: 14
+Info (12021): Found 1 design units, including 1 entities, in source file /usr1/fun/chisel/wb_sys_ip/synth/wb_stub_sys/wb_stub_sys.sv
+    Info (12023): Found entity 1: wb_stub_sys File: C:/usr1/fun/chisel/wb_sys_ip/synth/wb_stub_sys/wb_stub_sys.sv Line: 10
+Warning (10236): Verilog HDL Implicit Net warning at uart_regs.v(400): created implicit net for "rf_overrun" File: C:/usr1/fun/chisel/wb_sys_ip/rtl/wb_uart/uart_regs.v Line: 400
+Warning (10236): Verilog HDL Implicit Net warning at uart_regs.v(400): created implicit net for "rf_push_pulse" File: C:/usr1/fun/chisel/wb_sys_ip/rtl/wb_uart/uart_regs.v Line: 400
+Warning (10222): Verilog HDL Parameter Declaration warning at generic_sram_byte_en.v(19): Parameter Declaration in module "generic_sram_byte_en" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: C:/usr1/fun/chisel/wb_sys_ip/memory_primitives/rtl/fpga/altsyncram/generic_sram_byte_en.v Line: 19
+Warning (10222): Verilog HDL Parameter Declaration warning at generic_sram_line_en.v(17): Parameter Declaration in module "generic_sram_line_en" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: C:/usr1/fun/chisel/wb_sys_ip/memory_primitives/rtl/fpga/altsyncram/generic_sram_line_en.v Line: 17
+Warning (10222): Verilog HDL Parameter Declaration warning at generic_sram_line_en_dualport.v(23): Parameter Declaration in module "generic_sram_line_en_dualport" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: C:/usr1/fun/chisel/wb_sys_ip/memory_primitives/rtl/fpga/altsyncram/generic_sram_line_en_dualport.v Line: 23
+Warning (10222): Verilog HDL Parameter Declaration warning at wb_generic_line_en_sram_bridge.sv(20): Parameter Declaration in module "wb_generic_line_en_sram_bridge" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: C:/usr1/fun/chisel/wb_sys_ip/rtl/wb_sram_bridges/wb_generic_line_en_sram_bridge.sv Line: 20
+Info (12127): Elaborating entity "wb_stub_sys" for the top level hierarchy
+Warning (10036): Verilog HDL or VHDL warning at wb_stub_sys.sv(64): object "io_addr_limit_0" assigned a value but never read File: C:/usr1/fun/chisel/wb_sys_ip/synth/wb_stub_sys/wb_stub_sys.sv Line: 64
+Warning (10036): Verilog HDL or VHDL warning at wb_stub_sys.sv(66): object "io_addr_limit_1" assigned a value but never read File: C:/usr1/fun/chisel/wb_sys_ip/synth/wb_stub_sys/wb_stub_sys.sv Line: 66
+Warning (10036): Verilog HDL or VHDL warning at wb_stub_sys.sv(68): object "io_addr_limit_2" assigned a value but never read File: C:/usr1/fun/chisel/wb_sys_ip/synth/wb_stub_sys/wb_stub_sys.sv Line: 68
+Warning (10036): Verilog HDL or VHDL warning at wb_stub_sys.sv(70): object "io_addr_limit_3" assigned a value but never read File: C:/usr1/fun/chisel/wb_sys_ip/synth/wb_stub_sys/wb_stub_sys.sv Line: 70
+Warning (10230): Verilog HDL assignment warning at wb_stub_sys.sv(26): truncated value with size 32 to match size of target (8) File: C:/usr1/fun/chisel/wb_sys_ip/synth/wb_stub_sys/wb_stub_sys.sv Line: 26
+Info (12128): Elaborating entity "wb_if" for hierarchy "wb_if:m02ic" File: C:/usr1/fun/chisel/wb_sys_ip/synth/wb_stub_sys/wb_stub_sys.sv Line: 36
+Warning (12158): Entity "wb_if" contains only dangling pins File: C:/usr1/fun/chisel/wb_sys_ip/synth/wb_stub_sys/wb_stub_sys.sv Line: 36
+Info (12128): Elaborating entity "wishbone_test_master_32_32_4" for hierarchy "wishbone_test_master_32_32_4:u_m0" File: C:/usr1/fun/chisel/wb_sys_ip/synth/wb_stub_sys/wb_stub_sys.sv Line: 93
+Warning (10036): Verilog HDL or VHDL warning at wishbone_test_master_32_32_4.v(65): object "_GEN_1" assigned a value but never read File: C:/usr1/fun/chisel/wb_sys_ip/wishbone_test_master_32_32_4.v Line: 65
+Warning (10036): Verilog HDL or VHDL warning at wishbone_test_master_32_32_4.v(87): object "_GEN_14" assigned a value but never read File: C:/usr1/fun/chisel/wb_sys_ip/wishbone_test_master_32_32_4.v Line: 87
+Warning (10036): Verilog HDL or VHDL warning at wishbone_test_master_32_32_4.v(88): object "_GEN_15" assigned a value but never read File: C:/usr1/fun/chisel/wb_sys_ip/wishbone_test_master_32_32_4.v Line: 88
+Warning (10036): Verilog HDL or VHDL warning at wishbone_test_master_32_32_4.v(90): object "_GEN_17" assigned a value but never read File: C:/usr1/fun/chisel/wb_sys_ip/wishbone_test_master_32_32_4.v Line: 90
+Warning (10036): Verilog HDL or VHDL warning at wishbone_test_master_32_32_4.v(98): object "_GEN_20" assigned a value but never read File: C:/usr1/fun/chisel/wb_sys_ip/wishbone_test_master_32_32_4.v Line: 98
+Warning (10036): Verilog HDL or VHDL warning at wishbone_test_master_32_32_4.v(99): object "_GEN_21" assigned a value but never read File: C:/usr1/fun/chisel/wb_sys_ip/wishbone_test_master_32_32_4.v Line: 99
+Warning (10858): Verilog HDL warning at wishbone_test_master_32_32_4.v(100): object _GEN_23 used but never assigned File: C:/usr1/fun/chisel/wb_sys_ip/wishbone_test_master_32_32_4.v Line: 100
+Warning (10858): Verilog HDL warning at wishbone_test_master_32_32_4.v(102): object _GEN_24 used but never assigned File: C:/usr1/fun/chisel/wb_sys_ip/wishbone_test_master_32_32_4.v Line: 102
+Warning (10858): Verilog HDL warning at wishbone_test_master_32_32_4.v(104): object _GEN_25 used but never assigned File: C:/usr1/fun/chisel/wb_sys_ip/wishbone_test_master_32_32_4.v Line: 104
+Warning (10030): Net "_GEN_23" at wishbone_test_master_32_32_4.v(100) has no driver or initial value, using a default initial value '0' File: C:/usr1/fun/chisel/wb_sys_ip/wishbone_test_master_32_32_4.v Line: 100
+Warning (10030): Net "_GEN_24" at wishbone_test_master_32_32_4.v(102) has no driver or initial value, using a default initial value '0' File: C:/usr1/fun/chisel/wb_sys_ip/wishbone_test_master_32_32_4.v Line: 102
+Warning (10030): Net "_GEN_25" at wishbone_test_master_32_32_4.v(104) has no driver or initial value, using a default initial value '0' File: C:/usr1/fun/chisel/wb_sys_ip/wishbone_test_master_32_32_4.v Line: 104
+Info (12128): Elaborating entity "wb_interconnect_2x4" for hierarchy "wb_interconnect_2x4:u_ic" File: C:/usr1/fun/chisel/wb_sys_ip/synth/wb_stub_sys/wb_stub_sys.sv Line: 240
+Warning (10030): Net "SDAT_R[4]" at wb_interconnect_2x4.sv(57) has no driver or initial value, using a default initial value '0' File: C:/usr1/fun/chisel/wb_sys_ip/rtl/interconnects/wb_interconnect_2x4.sv Line: 57
+Warning (10030): Net "SERR[4]" at wb_interconnect_2x4.sv(59) has no driver or initial value, using a default initial value '0' File: C:/usr1/fun/chisel/wb_sys_ip/rtl/interconnects/wb_interconnect_2x4.sv Line: 59
+Warning (10030): Net "SACK[4]" at wb_interconnect_2x4.sv(62) has no driver or initial value, using a default initial value '0' File: C:/usr1/fun/chisel/wb_sys_ip/rtl/interconnects/wb_interconnect_2x4.sv Line: 62
+Warning (10034): Output port "m0.TGD_R[0]" at wb_interconnect_2x4.sv(24) has no driver File: C:/usr1/fun/chisel/wb_sys_ip/rtl/interconnects/wb_interconnect_2x4.sv Line: 24
+Warning (10034): Output port "m1.TGD_R[0]" at wb_interconnect_2x4.sv(25) has no driver File: C:/usr1/fun/chisel/wb_sys_ip/rtl/interconnects/wb_interconnect_2x4.sv Line: 25
+Warning (10034): Output port "s0.TGA[0]" at wb_interconnect_2x4.sv(26) has no driver File: C:/usr1/fun/chisel/wb_sys_ip/rtl/interconnects/wb_interconnect_2x4.sv Line: 26
+Warning (10034): Output port "s0.TGD_W[0]" at wb_interconnect_2x4.sv(26) has no driver File: C:/usr1/fun/chisel/wb_sys_ip/rtl/interconnects/wb_interconnect_2x4.sv Line: 26
+Warning (10034): Output port "s0.TGD_R[0]" at wb_interconnect_2x4.sv(26) has no driver File: C:/usr1/fun/chisel/wb_sys_ip/rtl/interconnects/wb_interconnect_2x4.sv Line: 26
+Warning (10034): Output port "s0.TGC[0]" at wb_interconnect_2x4.sv(26) has no driver File: C:/usr1/fun/chisel/wb_sys_ip/rtl/interconnects/wb_interconnect_2x4.sv Line: 26
+Warning (10034): Output port "s1.TGA[0]" at wb_interconnect_2x4.sv(27) has no driver File: C:/usr1/fun/chisel/wb_sys_ip/rtl/interconnects/wb_interconnect_2x4.sv Line: 27
+Warning (10034): Output port "s1.TGD_W[0]" at wb_interconnect_2x4.sv(27) has no driver File: C:/usr1/fun/chisel/wb_sys_ip/rtl/interconnects/wb_interconnect_2x4.sv Line: 27
+Warning (10034): Output port "s1.TGD_R[0]" at wb_interconnect_2x4.sv(27) has no driver File: C:/usr1/fun/chisel/wb_sys_ip/rtl/interconnects/wb_interconnect_2x4.sv Line: 27
+Warning (10034): Output port "s1.TGC[0]" at wb_interconnect_2x4.sv(27) has no driver File: C:/usr1/fun/chisel/wb_sys_ip/rtl/interconnects/wb_interconnect_2x4.sv Line: 27
+Warning (10034): Output port "s2.TGA[0]" at wb_interconnect_2x4.sv(28) has no driver File: C:/usr1/fun/chisel/wb_sys_ip/rtl/interconnects/wb_interconnect_2x4.sv Line: 28
+Warning (10034): Output port "s2.TGD_W[0]" at wb_interconnect_2x4.sv(28) has no driver File: C:/usr1/fun/chisel/wb_sys_ip/rtl/interconnects/wb_interconnect_2x4.sv Line: 28
+Warning (10034): Output port "s2.TGD_R[0]" at wb_interconnect_2x4.sv(28) has no driver File: C:/usr1/fun/chisel/wb_sys_ip/rtl/interconnects/wb_interconnect_2x4.sv Line: 28
+Warning (10034): Output port "s2.TGC[0]" at wb_interconnect_2x4.sv(28) has no driver File: C:/usr1/fun/chisel/wb_sys_ip/rtl/interconnects/wb_interconnect_2x4.sv Line: 28
+Warning (10034): Output port "s3.TGA[0]" at wb_interconnect_2x4.sv(30) has no driver File: C:/usr1/fun/chisel/wb_sys_ip/rtl/interconnects/wb_interconnect_2x4.sv Line: 30
+Warning (10034): Output port "s3.TGD_W[0]" at wb_interconnect_2x4.sv(30) has no driver File: C:/usr1/fun/chisel/wb_sys_ip/rtl/interconnects/wb_interconnect_2x4.sv Line: 30
+Warning (10034): Output port "s3.TGD_R[0]" at wb_interconnect_2x4.sv(30) has no driver File: C:/usr1/fun/chisel/wb_sys_ip/rtl/interconnects/wb_interconnect_2x4.sv Line: 30
+Warning (10034): Output port "s3.TGC[0]" at wb_interconnect_2x4.sv(30) has no driver File: C:/usr1/fun/chisel/wb_sys_ip/rtl/interconnects/wb_interconnect_2x4.sv Line: 30
+Info (12128): Elaborating entity "wb_interconnect_NxN" for hierarchy "wb_interconnect_2x4:u_ic|wb_interconnect_NxN:ic0" File: C:/usr1/fun/chisel/wb_sys_ip/rtl/interconnects/wb_interconnect_2x4.sv Line: 97
+Warning (10230): Verilog HDL assignment warning at wb_stub_sys.sv(285): truncated value with size 32 to match size of target (4) File: C:/usr1/fun/chisel/wb_sys_ip/synth/wb_stub_sys/wb_stub_sys.sv Line: 285
+Warning (10230): Verilog HDL assignment warning at wb_interconnect_NxN.sv(160): truncated value with size 32 to match size of target (1) File: C:/usr1/fun/chisel/wb_sys_ip/rtl/interconnects/wb_interconnect_NxN.sv Line: 160
+Warning (10230): Verilog HDL assignment warning at wb_interconnect_NxN.sv(164): truncated value with size 32 to match size of target (1) File: C:/usr1/fun/chisel/wb_sys_ip/rtl/interconnects/wb_interconnect_NxN.sv Line: 164
+Warning (10230): Verilog HDL assignment warning at wb_interconnect_NxN.sv(176): truncated value with size 32 to match size of target (3) File: C:/usr1/fun/chisel/wb_sys_ip/rtl/interconnects/wb_interconnect_NxN.sv Line: 176
+Warning (10230): Verilog HDL assignment warning at wb_interconnect_NxN.sv(177): truncated value with size 32 to match size of target (2) File: C:/usr1/fun/chisel/wb_sys_ip/rtl/interconnects/wb_interconnect_NxN.sv Line: 177
+Warning (10230): Verilog HDL assignment warning at wb_interconnect_NxN.sv(179): truncated value with size 32 to match size of target (1) File: C:/usr1/fun/chisel/wb_sys_ip/rtl/interconnects/wb_interconnect_NxN.sv Line: 179
+Warning (10230): Verilog HDL assignment warning at wb_interconnect_NxN.sv(180): truncated value with size 32 to match size of target (4) File: C:/usr1/fun/chisel/wb_sys_ip/rtl/interconnects/wb_interconnect_NxN.sv Line: 180
+Warning (10230): Verilog HDL assignment warning at wb_interconnect_NxN.sv(181): truncated value with size 32 to match size of target (1) File: C:/usr1/fun/chisel/wb_sys_ip/rtl/interconnects/wb_interconnect_NxN.sv Line: 181
+Warning (10230): Verilog HDL assignment warning at wb_interconnect_NxN.sv(182): truncated value with size 32 to match size of target (1) File: C:/usr1/fun/chisel/wb_sys_ip/rtl/interconnects/wb_interconnect_NxN.sv Line: 182
+Info (12128): Elaborating entity "wb_NxN_arbiter" for hierarchy "wb_interconnect_2x4:u_ic|wb_interconnect_NxN:ic0|wb_NxN_arbiter:s_arb[0].aw_arb" File: C:/usr1/fun/chisel/wb_sys_ip/rtl/interconnects/wb_interconnect_NxN.sv Line: 136
+Warning (10230): Verilog HDL assignment warning at wb_interconnect_NxN.sv(311): truncated value with size 32 to match size of target (1) File: C:/usr1/fun/chisel/wb_sys_ip/rtl/interconnects/wb_interconnect_NxN.sv Line: 311
+Info (12128): Elaborating entity "wb_sram" for hierarchy "wb_sram:u_sram0" File: C:/usr1/fun/chisel/wb_sys_ip/synth/wb_stub_sys/wb_stub_sys.sv Line: 256
+Info (12128): Elaborating entity "generic_sram_byte_en_if" for hierarchy "wb_sram:u_sram0|generic_sram_byte_en_if:u_sram_if" File: C:/usr1/fun/chisel/wb_sys_ip/rtl/wb_sram/wb_sram.sv Line: 31
+Warning (12158): Entity "generic_sram_byte_en_if" contains only dangling pins File: C:/usr1/fun/chisel/wb_sys_ip/rtl/wb_sram/wb_sram.sv Line: 31
+Info (12128): Elaborating entity "wb_generic_byte_en_sram_bridge" for hierarchy "wb_sram:u_sram0|wb_generic_byte_en_sram_bridge:u_bridge" File: C:/usr1/fun/chisel/wb_sys_ip/rtl/wb_sram/wb_sram.sv Line: 39
+Info (10648): Verilog HDL Display System Task info at wb_generic_byte_en_sram_bridge.sv(44): ...|wb_generic_byte_en_sram_bridge: ADDRESS_WIDTH=14 DATA_WIDTH=32 ADR[15:2] File: C:/usr1/fun/chisel/wb_sys_ip/rtl/wb_sram_bridges/wb_generic_byte_en_sram_bridge.sv Line: 44
+Info (12128): Elaborating entity "generic_sram_byte_en_w" for hierarchy "wb_sram:u_sram0|generic_sram_byte_en_w:u_sram" File: C:/usr1/fun/chisel/wb_sys_ip/rtl/wb_sram/wb_sram.sv Line: 47
+Info (12128): Elaborating entity "generic_sram_byte_en" for hierarchy "wb_sram:u_sram0|generic_sram_byte_en_w:u_sram|generic_sram_byte_en:ram" File: C:/usr1/fun/chisel/wb_sys_ip/memory_primitives/rtl/generic_sram_byte_en_w.sv Line: 44
+Info (12128): Elaborating entity "altsyncram" for hierarchy "wb_sram:u_sram0|generic_sram_byte_en_w:u_sram|generic_sram_byte_en:ram|altsyncram:u_altram" File: C:/usr1/fun/chisel/wb_sys_ip/memory_primitives/rtl/fpga/altsyncram/generic_sram_byte_en.v Line: 61
+Info (12130): Elaborated megafunction instantiation "wb_sram:u_sram0|generic_sram_byte_en_w:u_sram|generic_sram_byte_en:ram|altsyncram:u_altram" File: C:/usr1/fun/chisel/wb_sys_ip/memory_primitives/rtl/fpga/altsyncram/generic_sram_byte_en.v Line: 61
+Info (12133): Instantiated megafunction "wb_sram:u_sram0|generic_sram_byte_en_w:u_sram|generic_sram_byte_en:ram|altsyncram:u_altram" with the following parameter: File: C:/usr1/fun/chisel/wb_sys_ip/memory_primitives/rtl/fpga/altsyncram/generic_sram_byte_en.v Line: 61
+    Info (12134): Parameter "byte_size" = "8"
+    Info (12134): Parameter "clock_enable_input_a" = "BYPASS"
+    Info (12134): Parameter "clock_enable_output_a" = "BYPASS"
+    Info (12134): Parameter "init_file" = ""
+    Info (12134): Parameter "intended_device_family" = "Cyclone V"
+    Info (12134): Parameter "lpm_hint" = "ENABLE_RUNTIME_MOD=NO"
+    Info (12134): Parameter "lpm_type" = "altsyncram"
+    Info (12134): Parameter "numwords_a" = "16384"
+    Info (12134): Parameter "operation_mode" = "SINGLE_PORT"
+    Info (12134): Parameter "outdata_aclr_a" = "NONE"
+    Info (12134): Parameter "outdata_reg_a" = "CLOCK0"
+    Info (12134): Parameter "power_up_uninitialized" = "FALSE"
+    Info (12134): Parameter "read_during_write_mode_port_a" = "NEW_DATA_NO_NBE_READ"
+    Info (12134): Parameter "widthad_a" = "00001110"
+    Info (12134): Parameter "width_a" = "00100000"
+    Info (12134): Parameter "width_byteena_a" = "00000000000000000000000000000100"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_jsn1.tdf
+    Info (12023): Found entity 1: altsyncram_jsn1 File: C:/rundir/wb_stub_sys/synth/db/altsyncram_jsn1.tdf Line: 34
+Info (12128): Elaborating entity "altsyncram_jsn1" for hierarchy "wb_sram:u_sram0|generic_sram_byte_en_w:u_sram|generic_sram_byte_en:ram|altsyncram:u_altram|altsyncram_jsn1:auto_generated" File: c:/tools/quartus/17.0/quartus/libraries/megafunctions/altsyncram.tdf Line: 792
+Info (12021): Found 1 design units, including 1 entities, in source file db/decode_5la.tdf
+    Info (12023): Found entity 1: decode_5la File: C:/rundir/wb_stub_sys/synth/db/decode_5la.tdf Line: 23
+Info (12128): Elaborating entity "decode_5la" for hierarchy "wb_sram:u_sram0|generic_sram_byte_en_w:u_sram|generic_sram_byte_en:ram|altsyncram:u_altram|altsyncram_jsn1:auto_generated|decode_5la:decode3" File: C:/rundir/wb_stub_sys/synth/db/altsyncram_jsn1.tdf Line: 46
+Info (12021): Found 1 design units, including 1 entities, in source file db/decode_u0a.tdf
+    Info (12023): Found entity 1: decode_u0a File: C:/rundir/wb_stub_sys/synth/db/decode_u0a.tdf Line: 23
+Info (12128): Elaborating entity "decode_u0a" for hierarchy "wb_sram:u_sram0|generic_sram_byte_en_w:u_sram|generic_sram_byte_en:ram|altsyncram:u_altram|altsyncram_jsn1:auto_generated|decode_u0a:rden_decode" File: C:/rundir/wb_stub_sys/synth/db/altsyncram_jsn1.tdf Line: 47
+Info (12021): Found 1 design units, including 1 entities, in source file db/mux_2hb.tdf
+    Info (12023): Found entity 1: mux_2hb File: C:/rundir/wb_stub_sys/synth/db/mux_2hb.tdf Line: 23
+Info (12128): Elaborating entity "mux_2hb" for hierarchy "wb_sram:u_sram0|generic_sram_byte_en_w:u_sram|generic_sram_byte_en:ram|altsyncram:u_altram|altsyncram_jsn1:auto_generated|mux_2hb:mux2" File: C:/rundir/wb_stub_sys/synth/db/altsyncram_jsn1.tdf Line: 48
+Warning (14284): Synthesized away the following node(s):
+    Warning (14285): Synthesized away the following RAM node(s):
+        Warning (14320): Synthesized away node "wb_sram:u_sram3|generic_sram_byte_en_w:u_sram|generic_sram_byte_en:ram|altsyncram:u_altram|altsyncram_jsn1:auto_generated|ram_block1a32" File: C:/rundir/wb_stub_sys/synth/db/altsyncram_jsn1.tdf Line: 785
+        Warning (14320): Synthesized away node "wb_sram:u_sram3|generic_sram_byte_en_w:u_sram|generic_sram_byte_en:ram|altsyncram:u_altram|altsyncram_jsn1:auto_generated|ram_block1a33" File: C:/rundir/wb_stub_sys/synth/db/altsyncram_jsn1.tdf Line: 808
+        Warning (14320): Synthesized away node "wb_sram:u_sram3|generic_sram_byte_en_w:u_sram|generic_sram_byte_en:ram|altsyncram:u_altram|altsyncram_jsn1:auto_generated|ram_block1a34" File: C:/rundir/wb_stub_sys/synth/db/altsyncram_jsn1.tdf Line: 831
+        Warning (14320): Synthesized away node "wb_sram:u_sram3|generic_sram_byte_en_w:u_sram|generic_sram_byte_en:ram|altsyncram:u_altram|altsyncram_jsn1:auto_generated|ram_block1a35" File: C:/rundir/wb_stub_sys/synth/db/altsyncram_jsn1.tdf Line: 854
+        Warning (14320): Synthesized away node "wb_sram:u_sram3|generic_sram_byte_en_w:u_sram|generic_sram_byte_en:ram|altsyncram:u_altram|altsyncram_jsn1:auto_generated|ram_block1a36" File: C:/rundir/wb_stub_sys/synth/db/altsyncram_jsn1.tdf Line: 877
+        Warning (14320): Synthesized away node "wb_sram:u_sram3|generic_sram_byte_en_w:u_sram|generic_sram_byte_en:ram|altsyncram:u_altram|altsyncram_jsn1:auto_generated|ram_block1a37" File: C:/rundir/wb_stub_sys/synth/db/altsyncram_jsn1.tdf Line: 900
+        Warning (14320): Synthesized away node "wb_sram:u_sram3|generic_sram_byte_en_w:u_sram|generic_sram_byte_en:ram|altsyncram:u_altram|altsyncram_jsn1:auto_generated|ram_block1a38" File: C:/rundir/wb_stub_sys/synth/db/altsyncram_jsn1.tdf Line: 923
+        Warning (14320): Synthesized away node "wb_sram:u_sram3|generic_sram_byte_en_w:u_sram|generic_sram_byte_en:ram|altsyncram:u_altram|altsyncram_jsn1:auto_generated|ram_block1a39" File: C:/rundir/wb_stub_sys/synth/db/altsyncram_jsn1.tdf Line: 946
+        Warning (14320): Synthesized away node "wb_sram:u_sram3|generic_sram_byte_en_w:u_sram|generic_sram_byte_en:ram|altsyncram:u_altram|altsyncram_jsn1:auto_generated|ram_block1a40" File: C:/rundir/wb_stub_sys/synth/db/altsyncram_jsn1.tdf Line: 969
+        Warning (14320): Synthesized away node "wb_sram:u_sram3|generic_sram_byte_en_w:u_sram|generic_sram_byte_en:ram|altsyncram:u_altram|altsyncram_jsn1:auto_generated|ram_block1a41" File: C:/rundir/wb_stub_sys/synth/db/altsyncram_jsn1.tdf Line: 992
+        Warning (14320): Synthesized away node "wb_sram:u_sram3|generic_sram_byte_en_w:u_sram|generic_sram_byte_en:ram|altsyncram:u_altram|altsyncram_jsn1:auto_generated|ram_block1a42" File: C:/rundir/wb_stub_sys/synth/db/altsyncram_jsn1.tdf Line: 1015
+        Warning (14320): Synthesized away node "wb_sram:u_sram3|generic_sram_byte_en_w:u_sram|generic_sram_byte_en:ram|altsyncram:u_altram|altsyncram_jsn1:auto_generated|ram_block1a43" File: C:/rundir/wb_stub_sys/synth/db/altsyncram_jsn1.tdf Line: 1038
+        Warning (14320): Synthesized away node "wb_sram:u_sram3|generic_sram_byte_en_w:u_sram|generic_sram_byte_en:ram|altsyncram:u_altram|altsyncram_jsn1:auto_generated|ram_block1a44" File: C:/rundir/wb_stub_sys/synth/db/altsyncram_jsn1.tdf Line: 1061
+        Warning (14320): Synthesized away node "wb_sram:u_sram3|generic_sram_byte_en_w:u_sram|generic_sram_byte_en:ram|altsyncram:u_altram|altsyncram_jsn1:auto_generated|ram_block1a45" File: C:/rundir/wb_stub_sys/synth/db/altsyncram_jsn1.tdf Line: 1084
+        Warning (14320): Synthesized away node "wb_sram:u_sram3|generic_sram_byte_en_w:u_sram|generic_sram_byte_en:ram|altsyncram:u_altram|altsyncram_jsn1:auto_generated|ram_block1a46" File: C:/rundir/wb_stub_sys/synth/db/altsyncram_jsn1.tdf Line: 1107
+        Warning (14320): Synthesized away node "wb_sram:u_sram3|generic_sram_byte_en_w:u_sram|generic_sram_byte_en:ram|altsyncram:u_altram|altsyncram_jsn1:auto_generated|ram_block1a47" File: C:/rundir/wb_stub_sys/synth/db/altsyncram_jsn1.tdf Line: 1130
+        Warning (14320): Synthesized away node "wb_sram:u_sram3|generic_sram_byte_en_w:u_sram|generic_sram_byte_en:ram|altsyncram:u_altram|altsyncram_jsn1:auto_generated|ram_block1a48" File: C:/rundir/wb_stub_sys/synth/db/altsyncram_jsn1.tdf Line: 1153
+        Warning (14320): Synthesized away node "wb_sram:u_sram3|generic_sram_byte_en_w:u_sram|generic_sram_byte_en:ram|altsyncram:u_altram|altsyncram_jsn1:auto_generated|ram_block1a49" File: C:/rundir/wb_stub_sys/synth/db/altsyncram_jsn1.tdf Line: 1176
+        Warning (14320): Synthesized away node "wb_sram:u_sram3|generic_sram_byte_en_w:u_sram|generic_sram_byte_en:ram|altsyncram:u_altram|altsyncram_jsn1:auto_generated|ram_block1a50" File: C:/rundir/wb_stub_sys/synth/db/altsyncram_jsn1.tdf Line: 1199
+        Warning (14320): Synthesized away node "wb_sram:u_sram3|generic_sram_byte_en_w:u_sram|generic_sram_byte_en:ram|altsyncram:u_altram|altsyncram_jsn1:auto_generated|ram_block1a51" File: C:/rundir/wb_stub_sys/synth/db/altsyncram_jsn1.tdf Line: 1222
+        Warning (14320): Synthesized away node "wb_sram:u_sram3|generic_sram_byte_en_w:u_sram|generic_sram_byte_en:ram|altsyncram:u_altram|altsyncram_jsn1:auto_generated|ram_block1a52" File: C:/rundir/wb_stub_sys/synth/db/altsyncram_jsn1.tdf Line: 1245
+        Warning (14320): Synthesized away node "wb_sram:u_sram3|generic_sram_byte_en_w:u_sram|generic_sram_byte_en:ram|altsyncram:u_altram|altsyncram_jsn1:auto_generated|ram_block1a53" File: C:/rundir/wb_stub_sys/synth/db/altsyncram_jsn1.tdf Line: 1268
+        Warning (14320): Synthesized away node "wb_sram:u_sram3|generic_sram_byte_en_w:u_sram|generic_sram_byte_en:ram|altsyncram:u_altram|altsyncram_jsn1:auto_generated|ram_block1a54" File: C:/rundir/wb_stub_sys/synth/db/altsyncram_jsn1.tdf Line: 1291
+        Warning (14320): Synthesized away node "wb_sram:u_sram3|generic_sram_byte_en_w:u_sram|generic_sram_byte_en:ram|altsyncram:u_altram|altsyncram_jsn1:auto_generated|ram_block1a55" File: C:/rundir/wb_stub_sys/synth/db/altsyncram_jsn1.tdf Line: 1314
+        Warning (14320): Synthesized away node "wb_sram:u_sram3|generic_sram_byte_en_w:u_sram|generic_sram_byte_en:ram|altsyncram:u_altram|altsyncram_jsn1:auto_generated|ram_block1a56" File: C:/rundir/wb_stub_sys/synth/db/altsyncram_jsn1.tdf Line: 1337
+        Warning (14320): Synthesized away node "wb_sram:u_sram3|generic_sram_byte_en_w:u_sram|generic_sram_byte_en:ram|altsyncram:u_altram|altsyncram_jsn1:auto_generated|ram_block1a57" File: C:/rundir/wb_stub_sys/synth/db/altsyncram_jsn1.tdf Line: 1360
+        Warning (14320): Synthesized away node "wb_sram:u_sram3|generic_sram_byte_en_w:u_sram|generic_sram_byte_en:ram|altsyncram:u_altram|altsyncram_jsn1:auto_generated|ram_block1a58" File: C:/rundir/wb_stub_sys/synth/db/altsyncram_jsn1.tdf Line: 1383
+        Warning (14320): Synthesized away node "wb_sram:u_sram3|generic_sram_byte_en_w:u_sram|generic_sram_byte_en:ram|altsyncram:u_altram|altsyncram_jsn1:auto_generated|ram_block1a59" File: C:/rundir/wb_stub_sys/synth/db/altsyncram_jsn1.tdf Line: 1406
+        Warning (14320): Synthesized away node "wb_sram:u_sram3|generic_sram_byte_en_w:u_sram|generic_sram_byte_en:ram|altsyncram:u_altram|altsyncram_jsn1:auto_generated|ram_block1a60" File: C:/rundir/wb_stub_sys/synth/db/altsyncram_jsn1.tdf Line: 1429
+        Warning (14320): Synthesized away node "wb_sram:u_sram3|generic_sram_byte_en_w:u_sram|generic_sram_byte_en:ram|altsyncram:u_altram|altsyncram_jsn1:auto_generated|ram_block1a61" File: C:/rundir/wb_stub_sys/synth/db/altsyncram_jsn1.tdf Line: 1452
+        Warning (14320): Synthesized away node "wb_sram:u_sram3|generic_sram_byte_en_w:u_sram|generic_sram_byte_en:ram|altsyncram:u_altram|altsyncram_jsn1:auto_generated|ram_block1a62" File: C:/rundir/wb_stub_sys/synth/db/altsyncram_jsn1.tdf Line: 1475
+        Warning (14320): Synthesized away node "wb_sram:u_sram3|generic_sram_byte_en_w:u_sram|generic_sram_byte_en:ram|altsyncram:u_altram|altsyncram_jsn1:auto_generated|ram_block1a63" File: C:/rundir/wb_stub_sys/synth/db/altsyncram_jsn1.tdf Line: 1498
+        Warning (14320): Synthesized away node "wb_sram:u_sram2|generic_sram_byte_en_w:u_sram|generic_sram_byte_en:ram|altsyncram:u_altram|altsyncram_jsn1:auto_generated|ram_block1a32" File: C:/rundir/wb_stub_sys/synth/db/altsyncram_jsn1.tdf Line: 785
+        Warning (14320): Synthesized away node "wb_sram:u_sram2|generic_sram_byte_en_w:u_sram|generic_sram_byte_en:ram|altsyncram:u_altram|altsyncram_jsn1:auto_generated|ram_block1a33" File: C:/rundir/wb_stub_sys/synth/db/altsyncram_jsn1.tdf Line: 808
+        Warning (14320): Synthesized away node "wb_sram:u_sram2|generic_sram_byte_en_w:u_sram|generic_sram_byte_en:ram|altsyncram:u_altram|altsyncram_jsn1:auto_generated|ram_block1a34" File: C:/rundir/wb_stub_sys/synth/db/altsyncram_jsn1.tdf Line: 831
+        Warning (14320): Synthesized away node "wb_sram:u_sram2|generic_sram_byte_en_w:u_sram|generic_sram_byte_en:ram|altsyncram:u_altram|altsyncram_jsn1:auto_generated|ram_block1a35" File: C:/rundir/wb_stub_sys/synth/db/altsyncram_jsn1.tdf Line: 854
+        Warning (14320): Synthesized away node "wb_sram:u_sram2|generic_sram_byte_en_w:u_sram|generic_sram_byte_en:ram|altsyncram:u_altram|altsyncram_jsn1:auto_generated|ram_block1a36" File: C:/rundir/wb_stub_sys/synth/db/altsyncram_jsn1.tdf Line: 877
+        Warning (14320): Synthesized away node "wb_sram:u_sram2|generic_sram_byte_en_w:u_sram|generic_sram_byte_en:ram|altsyncram:u_altram|altsyncram_jsn1:auto_generated|ram_block1a37" File: C:/rundir/wb_stub_sys/synth/db/altsyncram_jsn1.tdf Line: 900
+        Warning (14320): Synthesized away node "wb_sram:u_sram2|generic_sram_byte_en_w:u_sram|generic_sram_byte_en:ram|altsyncram:u_altram|altsyncram_jsn1:auto_generated|ram_block1a38" File: C:/rundir/wb_stub_sys/synth/db/altsyncram_jsn1.tdf Line: 923
+        Warning (14320): Synthesized away node "wb_sram:u_sram2|generic_sram_byte_en_w:u_sram|generic_sram_byte_en:ram|altsyncram:u_altram|altsyncram_jsn1:auto_generated|ram_block1a39" File: C:/rundir/wb_stub_sys/synth/db/altsyncram_jsn1.tdf Line: 946
+        Warning (14320): Synthesized away node "wb_sram:u_sram2|generic_sram_byte_en_w:u_sram|generic_sram_byte_en:ram|altsyncram:u_altram|altsyncram_jsn1:auto_generated|ram_block1a40" File: C:/rundir/wb_stub_sys/synth/db/altsyncram_jsn1.tdf Line: 969
+        Warning (14320): Synthesized away node "wb_sram:u_sram2|generic_sram_byte_en_w:u_sram|generic_sram_byte_en:ram|altsyncram:u_altram|altsyncram_jsn1:auto_generated|ram_block1a41" File: C:/rundir/wb_stub_sys/synth/db/altsyncram_jsn1.tdf Line: 992
+        Warning (14320): Synthesized away node "wb_sram:u_sram2|generic_sram_byte_en_w:u_sram|generic_sram_byte_en:ram|altsyncram:u_altram|altsyncram_jsn1:auto_generated|ram_block1a42" File: C:/rundir/wb_stub_sys/synth/db/altsyncram_jsn1.tdf Line: 1015
+        Warning (14320): Synthesized away node "wb_sram:u_sram2|generic_sram_byte_en_w:u_sram|generic_sram_byte_en:ram|altsyncram:u_altram|altsyncram_jsn1:auto_generated|ram_block1a43" File: C:/rundir/wb_stub_sys/synth/db/altsyncram_jsn1.tdf Line: 1038
+        Warning (14320): Synthesized away node "wb_sram:u_sram2|generic_sram_byte_en_w:u_sram|generic_sram_byte_en:ram|altsyncram:u_altram|altsyncram_jsn1:auto_generated|ram_block1a44" File: C:/rundir/wb_stub_sys/synth/db/altsyncram_jsn1.tdf Line: 1061
+        Warning (14320): Synthesized away node "wb_sram:u_sram2|generic_sram_byte_en_w:u_sram|generic_sram_byte_en:ram|altsyncram:u_altram|altsyncram_jsn1:auto_generated|ram_block1a45" File: C:/rundir/wb_stub_sys/synth/db/altsyncram_jsn1.tdf Line: 1084
+        Warning (14320): Synthesized away node "wb_sram:u_sram2|generic_sram_byte_en_w:u_sram|generic_sram_byte_en:ram|altsyncram:u_altram|altsyncram_jsn1:auto_generated|ram_block1a46" File: C:/rundir/wb_stub_sys/synth/db/altsyncram_jsn1.tdf Line: 1107
+        Warning (14320): Synthesized away node "wb_sram:u_sram2|generic_sram_byte_en_w:u_sram|generic_sram_byte_en:ram|altsyncram:u_altram|altsyncram_jsn1:auto_generated|ram_block1a47" File: C:/rundir/wb_stub_sys/synth/db/altsyncram_jsn1.tdf Line: 1130
+        Warning (14320): Synthesized away node "wb_sram:u_sram2|generic_sram_byte_en_w:u_sram|generic_sram_byte_en:ram|altsyncram:u_altram|altsyncram_jsn1:auto_generated|ram_block1a48" File: C:/rundir/wb_stub_sys/synth/db/altsyncram_jsn1.tdf Line: 1153
+        Warning (14320): Synthesized away node "wb_sram:u_sram2|generic_sram_byte_en_w:u_sram|generic_sram_byte_en:ram|altsyncram:u_altram|altsyncram_jsn1:auto_generated|ram_block1a49" File: C:/rundir/wb_stub_sys/synth/db/altsyncram_jsn1.tdf Line: 1176
+        Warning (14320): Synthesized away node "wb_sram:u_sram2|generic_sram_byte_en_w:u_sram|generic_sram_byte_en:ram|altsyncram:u_altram|altsyncram_jsn1:auto_generated|ram_block1a50" File: C:/rundir/wb_stub_sys/synth/db/altsyncram_jsn1.tdf Line: 1199
+        Warning (14320): Synthesized away node "wb_sram:u_sram2|generic_sram_byte_en_w:u_sram|generic_sram_byte_en:ram|altsyncram:u_altram|altsyncram_jsn1:auto_generated|ram_block1a51" File: C:/rundir/wb_stub_sys/synth/db/altsyncram_jsn1.tdf Line: 1222
+        Warning (14320): Synthesized away node "wb_sram:u_sram2|generic_sram_byte_en_w:u_sram|generic_sram_byte_en:ram|altsyncram:u_altram|altsyncram_jsn1:auto_generated|ram_block1a52" File: C:/rundir/wb_stub_sys/synth/db/altsyncram_jsn1.tdf Line: 1245
+        Warning (14320): Synthesized away node "wb_sram:u_sram2|generic_sram_byte_en_w:u_sram|generic_sram_byte_en:ram|altsyncram:u_altram|altsyncram_jsn1:auto_generated|ram_block1a53" File: C:/rundir/wb_stub_sys/synth/db/altsyncram_jsn1.tdf Line: 1268
+        Warning (14320): Synthesized away node "wb_sram:u_sram2|generic_sram_byte_en_w:u_sram|generic_sram_byte_en:ram|altsyncram:u_altram|altsyncram_jsn1:auto_generated|ram_block1a54" File: C:/rundir/wb_stub_sys/synth/db/altsyncram_jsn1.tdf Line: 1291
+        Warning (14320): Synthesized away node "wb_sram:u_sram2|generic_sram_byte_en_w:u_sram|generic_sram_byte_en:ram|altsyncram:u_altram|altsyncram_jsn1:auto_generated|ram_block1a55" File: C:/rundir/wb_stub_sys/synth/db/altsyncram_jsn1.tdf Line: 1314
+        Warning (14320): Synthesized away node "wb_sram:u_sram2|generic_sram_byte_en_w:u_sram|generic_sram_byte_en:ram|altsyncram:u_altram|altsyncram_jsn1:auto_generated|ram_block1a56" File: C:/rundir/wb_stub_sys/synth/db/altsyncram_jsn1.tdf Line: 1337
+        Warning (14320): Synthesized away node "wb_sram:u_sram2|generic_sram_byte_en_w:u_sram|generic_sram_byte_en:ram|altsyncram:u_altram|altsyncram_jsn1:auto_generated|ram_block1a57" File: C:/rundir/wb_stub_sys/synth/db/altsyncram_jsn1.tdf Line: 1360
+        Warning (14320): Synthesized away node "wb_sram:u_sram2|generic_sram_byte_en_w:u_sram|generic_sram_byte_en:ram|altsyncram:u_altram|altsyncram_jsn1:auto_generated|ram_block1a58" File: C:/rundir/wb_stub_sys/synth/db/altsyncram_jsn1.tdf Line: 1383
+        Warning (14320): Synthesized away node "wb_sram:u_sram2|generic_sram_byte_en_w:u_sram|generic_sram_byte_en:ram|altsyncram:u_altram|altsyncram_jsn1:auto_generated|ram_block1a59" File: C:/rundir/wb_stub_sys/synth/db/altsyncram_jsn1.tdf Line: 1406
+        Warning (14320): Synthesized away node "wb_sram:u_sram2|generic_sram_byte_en_w:u_sram|generic_sram_byte_en:ram|altsyncram:u_altram|altsyncram_jsn1:auto_generated|ram_block1a60" File: C:/rundir/wb_stub_sys/synth/db/altsyncram_jsn1.tdf Line: 1429
+        Warning (14320): Synthesized away node "wb_sram:u_sram2|generic_sram_byte_en_w:u_sram|generic_sram_byte_en:ram|altsyncram:u_altram|altsyncram_jsn1:auto_generated|ram_block1a61" File: C:/rundir/wb_stub_sys/synth/db/altsyncram_jsn1.tdf Line: 1452
+        Warning (14320): Synthesized away node "wb_sram:u_sram2|generic_sram_byte_en_w:u_sram|generic_sram_byte_en:ram|altsyncram:u_altram|altsyncram_jsn1:auto_generated|ram_block1a62" File: C:/rundir/wb_stub_sys/synth/db/altsyncram_jsn1.tdf Line: 1475
+        Warning (14320): Synthesized away node "wb_sram:u_sram2|generic_sram_byte_en_w:u_sram|generic_sram_byte_en:ram|altsyncram:u_altram|altsyncram_jsn1:auto_generated|ram_block1a63" File: C:/rundir/wb_stub_sys/synth/db/altsyncram_jsn1.tdf Line: 1498
+        Warning (14320): Synthesized away node "wb_sram:u_sram1|generic_sram_byte_en_w:u_sram|generic_sram_byte_en:ram|altsyncram:u_altram|altsyncram_jsn1:auto_generated|ram_block1a32" File: C:/rundir/wb_stub_sys/synth/db/altsyncram_jsn1.tdf Line: 785
+        Warning (14320): Synthesized away node "wb_sram:u_sram1|generic_sram_byte_en_w:u_sram|generic_sram_byte_en:ram|altsyncram:u_altram|altsyncram_jsn1:auto_generated|ram_block1a33" File: C:/rundir/wb_stub_sys/synth/db/altsyncram_jsn1.tdf Line: 808
+        Warning (14320): Synthesized away node "wb_sram:u_sram1|generic_sram_byte_en_w:u_sram|generic_sram_byte_en:ram|altsyncram:u_altram|altsyncram_jsn1:auto_generated|ram_block1a34" File: C:/rundir/wb_stub_sys/synth/db/altsyncram_jsn1.tdf Line: 831
+        Warning (14320): Synthesized away node "wb_sram:u_sram1|generic_sram_byte_en_w:u_sram|generic_sram_byte_en:ram|altsyncram:u_altram|altsyncram_jsn1:auto_generated|ram_block1a35" File: C:/rundir/wb_stub_sys/synth/db/altsyncram_jsn1.tdf Line: 854
+        Warning (14320): Synthesized away node "wb_sram:u_sram1|generic_sram_byte_en_w:u_sram|generic_sram_byte_en:ram|altsyncram:u_altram|altsyncram_jsn1:auto_generated|ram_block1a36" File: C:/rundir/wb_stub_sys/synth/db/altsyncram_jsn1.tdf Line: 877
+        Warning (14320): Synthesized away node "wb_sram:u_sram1|generic_sram_byte_en_w:u_sram|generic_sram_byte_en:ram|altsyncram:u_altram|altsyncram_jsn1:auto_generated|ram_block1a37" File: C:/rundir/wb_stub_sys/synth/db/altsyncram_jsn1.tdf Line: 900
+        Warning (14320): Synthesized away node "wb_sram:u_sram1|generic_sram_byte_en_w:u_sram|generic_sram_byte_en:ram|altsyncram:u_altram|altsyncram_jsn1:auto_generated|ram_block1a38" File: C:/rundir/wb_stub_sys/synth/db/altsyncram_jsn1.tdf Line: 923
+        Warning (14320): Synthesized away node "wb_sram:u_sram1|generic_sram_byte_en_w:u_sram|generic_sram_byte_en:ram|altsyncram:u_altram|altsyncram_jsn1:auto_generated|ram_block1a39" File: C:/rundir/wb_stub_sys/synth/db/altsyncram_jsn1.tdf Line: 946
+        Warning (14320): Synthesized away node "wb_sram:u_sram1|generic_sram_byte_en_w:u_sram|generic_sram_byte_en:ram|altsyncram:u_altram|altsyncram_jsn1:auto_generated|ram_block1a40" File: C:/rundir/wb_stub_sys/synth/db/altsyncram_jsn1.tdf Line: 969
+        Warning (14320): Synthesized away node "wb_sram:u_sram1|generic_sram_byte_en_w:u_sram|generic_sram_byte_en:ram|altsyncram:u_altram|altsyncram_jsn1:auto_generated|ram_block1a41" File: C:/rundir/wb_stub_sys/synth/db/altsyncram_jsn1.tdf Line: 992
+        Warning (14320): Synthesized away node "wb_sram:u_sram1|generic_sram_byte_en_w:u_sram|generic_sram_byte_en:ram|altsyncram:u_altram|altsyncram_jsn1:auto_generated|ram_block1a42" File: C:/rundir/wb_stub_sys/synth/db/altsyncram_jsn1.tdf Line: 1015
+        Warning (14320): Synthesized away node "wb_sram:u_sram1|generic_sram_byte_en_w:u_sram|generic_sram_byte_en:ram|altsyncram:u_altram|altsyncram_jsn1:auto_generated|ram_block1a43" File: C:/rundir/wb_stub_sys/synth/db/altsyncram_jsn1.tdf Line: 1038
+        Warning (14320): Synthesized away node "wb_sram:u_sram1|generic_sram_byte_en_w:u_sram|generic_sram_byte_en:ram|altsyncram:u_altram|altsyncram_jsn1:auto_generated|ram_block1a44" File: C:/rundir/wb_stub_sys/synth/db/altsyncram_jsn1.tdf Line: 1061
+        Warning (14320): Synthesized away node "wb_sram:u_sram1|generic_sram_byte_en_w:u_sram|generic_sram_byte_en:ram|altsyncram:u_altram|altsyncram_jsn1:auto_generated|ram_block1a45" File: C:/rundir/wb_stub_sys/synth/db/altsyncram_jsn1.tdf Line: 1084
+        Warning (14320): Synthesized away node "wb_sram:u_sram1|generic_sram_byte_en_w:u_sram|generic_sram_byte_en:ram|altsyncram:u_altram|altsyncram_jsn1:auto_generated|ram_block1a46" File: C:/rundir/wb_stub_sys/synth/db/altsyncram_jsn1.tdf Line: 1107
+        Warning (14320): Synthesized away node "wb_sram:u_sram1|generic_sram_byte_en_w:u_sram|generic_sram_byte_en:ram|altsyncram:u_altram|altsyncram_jsn1:auto_generated|ram_block1a47" File: C:/rundir/wb_stub_sys/synth/db/altsyncram_jsn1.tdf Line: 1130
+        Warning (14320): Synthesized away node "wb_sram:u_sram1|generic_sram_byte_en_w:u_sram|generic_sram_byte_en:ram|altsyncram:u_altram|altsyncram_jsn1:auto_generated|ram_block1a48" File: C:/rundir/wb_stub_sys/synth/db/altsyncram_jsn1.tdf Line: 1153
+        Warning (14320): Synthesized away node "wb_sram:u_sram1|generic_sram_byte_en_w:u_sram|generic_sram_byte_en:ram|altsyncram:u_altram|altsyncram_jsn1:auto_generated|ram_block1a49" File: C:/rundir/wb_stub_sys/synth/db/altsyncram_jsn1.tdf Line: 1176
+        Warning (14320): Synthesized away node "wb_sram:u_sram1|generic_sram_byte_en_w:u_sram|generic_sram_byte_en:ram|altsyncram:u_altram|altsyncram_jsn1:auto_generated|ram_block1a50" File: C:/rundir/wb_stub_sys/synth/db/altsyncram_jsn1.tdf Line: 1199
+        Warning (14320): Synthesized away node "wb_sram:u_sram1|generic_sram_byte_en_w:u_sram|generic_sram_byte_en:ram|altsyncram:u_altram|altsyncram_jsn1:auto_generated|ram_block1a51" File: C:/rundir/wb_stub_sys/synth/db/altsyncram_jsn1.tdf Line: 1222
+        Warning (14320): Synthesized away node "wb_sram:u_sram1|generic_sram_byte_en_w:u_sram|generic_sram_byte_en:ram|altsyncram:u_altram|altsyncram_jsn1:auto_generated|ram_block1a52" File: C:/rundir/wb_stub_sys/synth/db/altsyncram_jsn1.tdf Line: 1245
+        Warning (14320): Synthesized away node "wb_sram:u_sram1|generic_sram_byte_en_w:u_sram|generic_sram_byte_en:ram|altsyncram:u_altram|altsyncram_jsn1:auto_generated|ram_block1a53" File: C:/rundir/wb_stub_sys/synth/db/altsyncram_jsn1.tdf Line: 1268
+        Warning (14320): Synthesized away node "wb_sram:u_sram1|generic_sram_byte_en_w:u_sram|generic_sram_byte_en:ram|altsyncram:u_altram|altsyncram_jsn1:auto_generated|ram_block1a54" File: C:/rundir/wb_stub_sys/synth/db/altsyncram_jsn1.tdf Line: 1291
+        Warning (14320): Synthesized away node "wb_sram:u_sram1|generic_sram_byte_en_w:u_sram|generic_sram_byte_en:ram|altsyncram:u_altram|altsyncram_jsn1:auto_generated|ram_block1a55" File: C:/rundir/wb_stub_sys/synth/db/altsyncram_jsn1.tdf Line: 1314
+        Warning (14320): Synthesized away node "wb_sram:u_sram1|generic_sram_byte_en_w:u_sram|generic_sram_byte_en:ram|altsyncram:u_altram|altsyncram_jsn1:auto_generated|ram_block1a56" File: C:/rundir/wb_stub_sys/synth/db/altsyncram_jsn1.tdf Line: 1337
+        Warning (14320): Synthesized away node "wb_sram:u_sram1|generic_sram_byte_en_w:u_sram|generic_sram_byte_en:ram|altsyncram:u_altram|altsyncram_jsn1:auto_generated|ram_block1a57" File: C:/rundir/wb_stub_sys/synth/db/altsyncram_jsn1.tdf Line: 1360
+        Warning (14320): Synthesized away node "wb_sram:u_sram1|generic_sram_byte_en_w:u_sram|generic_sram_byte_en:ram|altsyncram:u_altram|altsyncram_jsn1:auto_generated|ram_block1a58" File: C:/rundir/wb_stub_sys/synth/db/altsyncram_jsn1.tdf Line: 1383
+        Warning (14320): Synthesized away node "wb_sram:u_sram1|generic_sram_byte_en_w:u_sram|generic_sram_byte_en:ram|altsyncram:u_altram|altsyncram_jsn1:auto_generated|ram_block1a59" File: C:/rundir/wb_stub_sys/synth/db/altsyncram_jsn1.tdf Line: 1406
+        Warning (14320): Synthesized away node "wb_sram:u_sram1|generic_sram_byte_en_w:u_sram|generic_sram_byte_en:ram|altsyncram:u_altram|altsyncram_jsn1:auto_generated|ram_block1a60" File: C:/rundir/wb_stub_sys/synth/db/altsyncram_jsn1.tdf Line: 1429
+        Warning (14320): Synthesized away node "wb_sram:u_sram1|generic_sram_byte_en_w:u_sram|generic_sram_byte_en:ram|altsyncram:u_altram|altsyncram_jsn1:auto_generated|ram_block1a61" File: C:/rundir/wb_stub_sys/synth/db/altsyncram_jsn1.tdf Line: 1452
+        Warning (14320): Synthesized away node "wb_sram:u_sram1|generic_sram_byte_en_w:u_sram|generic_sram_byte_en:ram|altsyncram:u_altram|altsyncram_jsn1:auto_generated|ram_block1a62" File: C:/rundir/wb_stub_sys/synth/db/altsyncram_jsn1.tdf Line: 1475
+        Warning (14320): Synthesized away node "wb_sram:u_sram1|generic_sram_byte_en_w:u_sram|generic_sram_byte_en:ram|altsyncram:u_altram|altsyncram_jsn1:auto_generated|ram_block1a63" File: C:/rundir/wb_stub_sys/synth/db/altsyncram_jsn1.tdf Line: 1498
+        Warning (14320): Synthesized away node "wb_sram:u_sram0|generic_sram_byte_en_w:u_sram|generic_sram_byte_en:ram|altsyncram:u_altram|altsyncram_jsn1:auto_generated|ram_block1a32" File: C:/rundir/wb_stub_sys/synth/db/altsyncram_jsn1.tdf Line: 785
+        Warning (14320): Synthesized away node "wb_sram:u_sram0|generic_sram_byte_en_w:u_sram|generic_sram_byte_en:ram|altsyncram:u_altram|altsyncram_jsn1:auto_generated|ram_block1a33" File: C:/rundir/wb_stub_sys/synth/db/altsyncram_jsn1.tdf Line: 808
+        Warning (14320): Synthesized away node "wb_sram:u_sram0|generic_sram_byte_en_w:u_sram|generic_sram_byte_en:ram|altsyncram:u_altram|altsyncram_jsn1:auto_generated|ram_block1a34" File: C:/rundir/wb_stub_sys/synth/db/altsyncram_jsn1.tdf Line: 831
+        Warning (14320): Synthesized away node "wb_sram:u_sram0|generic_sram_byte_en_w:u_sram|generic_sram_byte_en:ram|altsyncram:u_altram|altsyncram_jsn1:auto_generated|ram_block1a35" File: C:/rundir/wb_stub_sys/synth/db/altsyncram_jsn1.tdf Line: 854
+        Warning (14320): Synthesized away node "wb_sram:u_sram0|generic_sram_byte_en_w:u_sram|generic_sram_byte_en:ram|altsyncram:u_altram|altsyncram_jsn1:auto_generated|ram_block1a36" File: C:/rundir/wb_stub_sys/synth/db/altsyncram_jsn1.tdf Line: 877
+        Warning (14320): Synthesized away node "wb_sram:u_sram0|generic_sram_byte_en_w:u_sram|generic_sram_byte_en:ram|altsyncram:u_altram|altsyncram_jsn1:auto_generated|ram_block1a37" File: C:/rundir/wb_stub_sys/synth/db/altsyncram_jsn1.tdf Line: 900
+        Warning (14320): Synthesized away node "wb_sram:u_sram0|generic_sram_byte_en_w:u_sram|generic_sram_byte_en:ram|altsyncram:u_altram|altsyncram_jsn1:auto_generated|ram_block1a38" File: C:/rundir/wb_stub_sys/synth/db/altsyncram_jsn1.tdf Line: 923
+        Warning (14320): Synthesized away node "wb_sram:u_sram0|generic_sram_byte_en_w:u_sram|generic_sram_byte_en:ram|altsyncram:u_altram|altsyncram_jsn1:auto_generated|ram_block1a39" File: C:/rundir/wb_stub_sys/synth/db/altsyncram_jsn1.tdf Line: 946
+        Warning (14320): Synthesized away node "wb_sram:u_sram0|generic_sram_byte_en_w:u_sram|generic_sram_byte_en:ram|altsyncram:u_altram|altsyncram_jsn1:auto_generated|ram_block1a40" File: C:/rundir/wb_stub_sys/synth/db/altsyncram_jsn1.tdf Line: 969
+        Warning (14320): Synthesized away node "wb_sram:u_sram0|generic_sram_byte_en_w:u_sram|generic_sram_byte_en:ram|altsyncram:u_altram|altsyncram_jsn1:auto_generated|ram_block1a41" File: C:/rundir/wb_stub_sys/synth/db/altsyncram_jsn1.tdf Line: 992
+        Warning (14320): Synthesized away node "wb_sram:u_sram0|generic_sram_byte_en_w:u_sram|generic_sram_byte_en:ram|altsyncram:u_altram|altsyncram_jsn1:auto_generated|ram_block1a42" File: C:/rundir/wb_stub_sys/synth/db/altsyncram_jsn1.tdf Line: 1015
+        Warning (14320): Synthesized away node "wb_sram:u_sram0|generic_sram_byte_en_w:u_sram|generic_sram_byte_en:ram|altsyncram:u_altram|altsyncram_jsn1:auto_generated|ram_block1a43" File: C:/rundir/wb_stub_sys/synth/db/altsyncram_jsn1.tdf Line: 1038
+        Warning (14320): Synthesized away node "wb_sram:u_sram0|generic_sram_byte_en_w:u_sram|generic_sram_byte_en:ram|altsyncram:u_altram|altsyncram_jsn1:auto_generated|ram_block1a44" File: C:/rundir/wb_stub_sys/synth/db/altsyncram_jsn1.tdf Line: 1061
+        Warning (14320): Synthesized away node "wb_sram:u_sram0|generic_sram_byte_en_w:u_sram|generic_sram_byte_en:ram|altsyncram:u_altram|altsyncram_jsn1:auto_generated|ram_block1a45" File: C:/rundir/wb_stub_sys/synth/db/altsyncram_jsn1.tdf Line: 1084
+        Warning (14320): Synthesized away node "wb_sram:u_sram0|generic_sram_byte_en_w:u_sram|generic_sram_byte_en:ram|altsyncram:u_altram|altsyncram_jsn1:auto_generated|ram_block1a46" File: C:/rundir/wb_stub_sys/synth/db/altsyncram_jsn1.tdf Line: 1107
+        Warning (14320): Synthesized away node "wb_sram:u_sram0|generic_sram_byte_en_w:u_sram|generic_sram_byte_en:ram|altsyncram:u_altram|altsyncram_jsn1:auto_generated|ram_block1a47" File: C:/rundir/wb_stub_sys/synth/db/altsyncram_jsn1.tdf Line: 1130
+        Warning (14320): Synthesized away node "wb_sram:u_sram0|generic_sram_byte_en_w:u_sram|generic_sram_byte_en:ram|altsyncram:u_altram|altsyncram_jsn1:auto_generated|ram_block1a48" File: C:/rundir/wb_stub_sys/synth/db/altsyncram_jsn1.tdf Line: 1153
+        Warning (14320): Synthesized away node "wb_sram:u_sram0|generic_sram_byte_en_w:u_sram|generic_sram_byte_en:ram|altsyncram:u_altram|altsyncram_jsn1:auto_generated|ram_block1a49" File: C:/rundir/wb_stub_sys/synth/db/altsyncram_jsn1.tdf Line: 1176
+        Warning (14320): Synthesized away node "wb_sram:u_sram0|generic_sram_byte_en_w:u_sram|generic_sram_byte_en:ram|altsyncram:u_altram|altsyncram_jsn1:auto_generated|ram_block1a50" File: C:/rundir/wb_stub_sys/synth/db/altsyncram_jsn1.tdf Line: 1199
+        Warning (14320): Synthesized away node "wb_sram:u_sram0|generic_sram_byte_en_w:u_sram|generic_sram_byte_en:ram|altsyncram:u_altram|altsyncram_jsn1:auto_generated|ram_block1a51" File: C:/rundir/wb_stub_sys/synth/db/altsyncram_jsn1.tdf Line: 1222
+        Warning (14320): Synthesized away node "wb_sram:u_sram0|generic_sram_byte_en_w:u_sram|generic_sram_byte_en:ram|altsyncram:u_altram|altsyncram_jsn1:auto_generated|ram_block1a52" File: C:/rundir/wb_stub_sys/synth/db/altsyncram_jsn1.tdf Line: 1245
+        Warning (14320): Synthesized away node "wb_sram:u_sram0|generic_sram_byte_en_w:u_sram|generic_sram_byte_en:ram|altsyncram:u_altram|altsyncram_jsn1:auto_generated|ram_block1a53" File: C:/rundir/wb_stub_sys/synth/db/altsyncram_jsn1.tdf Line: 1268
+        Warning (14320): Synthesized away node "wb_sram:u_sram0|generic_sram_byte_en_w:u_sram|generic_sram_byte_en:ram|altsyncram:u_altram|altsyncram_jsn1:auto_generated|ram_block1a54" File: C:/rundir/wb_stub_sys/synth/db/altsyncram_jsn1.tdf Line: 1291
+        Warning (14320): Synthesized away node "wb_sram:u_sram0|generic_sram_byte_en_w:u_sram|generic_sram_byte_en:ram|altsyncram:u_altram|altsyncram_jsn1:auto_generated|ram_block1a55" File: C:/rundir/wb_stub_sys/synth/db/altsyncram_jsn1.tdf Line: 1314
+        Warning (14320): Synthesized away node "wb_sram:u_sram0|generic_sram_byte_en_w:u_sram|generic_sram_byte_en:ram|altsyncram:u_altram|altsyncram_jsn1:auto_generated|ram_block1a56" File: C:/rundir/wb_stub_sys/synth/db/altsyncram_jsn1.tdf Line: 1337
+        Warning (14320): Synthesized away node "wb_sram:u_sram0|generic_sram_byte_en_w:u_sram|generic_sram_byte_en:ram|altsyncram:u_altram|altsyncram_jsn1:auto_generated|ram_block1a57" File: C:/rundir/wb_stub_sys/synth/db/altsyncram_jsn1.tdf Line: 1360
+        Warning (14320): Synthesized away node "wb_sram:u_sram0|generic_sram_byte_en_w:u_sram|generic_sram_byte_en:ram|altsyncram:u_altram|altsyncram_jsn1:auto_generated|ram_block1a58" File: C:/rundir/wb_stub_sys/synth/db/altsyncram_jsn1.tdf Line: 1383
+        Warning (14320): Synthesized away node "wb_sram:u_sram0|generic_sram_byte_en_w:u_sram|generic_sram_byte_en:ram|altsyncram:u_altram|altsyncram_jsn1:auto_generated|ram_block1a59" File: C:/rundir/wb_stub_sys/synth/db/altsyncram_jsn1.tdf Line: 1406
+        Warning (14320): Synthesized away node "wb_sram:u_sram0|generic_sram_byte_en_w:u_sram|generic_sram_byte_en:ram|altsyncram:u_altram|altsyncram_jsn1:auto_generated|ram_block1a60" File: C:/rundir/wb_stub_sys/synth/db/altsyncram_jsn1.tdf Line: 1429
+        Warning (14320): Synthesized away node "wb_sram:u_sram0|generic_sram_byte_en_w:u_sram|generic_sram_byte_en:ram|altsyncram:u_altram|altsyncram_jsn1:auto_generated|ram_block1a61" File: C:/rundir/wb_stub_sys/synth/db/altsyncram_jsn1.tdf Line: 1452
+        Warning (14320): Synthesized away node "wb_sram:u_sram0|generic_sram_byte_en_w:u_sram|generic_sram_byte_en:ram|altsyncram:u_altram|altsyncram_jsn1:auto_generated|ram_block1a62" File: C:/rundir/wb_stub_sys/synth/db/altsyncram_jsn1.tdf Line: 1475
+        Warning (14320): Synthesized away node "wb_sram:u_sram0|generic_sram_byte_en_w:u_sram|generic_sram_byte_en:ram|altsyncram:u_altram|altsyncram_jsn1:auto_generated|ram_block1a63" File: C:/rundir/wb_stub_sys/synth/db/altsyncram_jsn1.tdf Line: 1498
+Info (286030): Timing-Driven Synthesis is running
+Info (17049): 2 registers lost all their fanouts during netlist optimizations.
+Info (17036): Removed 5 MSB VCC or GND address nodes from RAM block "wb_sram:u_sram0|generic_sram_byte_en_w:u_sram|generic_sram_byte_en:ram|altsyncram:u_altram|altsyncram_jsn1:auto_generated|ALTSYNCRAM" File: C:/rundir/wb_stub_sys/synth/db/altsyncram_jsn1.tdf Line: 49
+Info (17036): Removed 5 MSB VCC or GND address nodes from RAM block "wb_sram:u_sram1|generic_sram_byte_en_w:u_sram|generic_sram_byte_en:ram|altsyncram:u_altram|altsyncram_jsn1:auto_generated|ALTSYNCRAM" File: C:/rundir/wb_stub_sys/synth/db/altsyncram_jsn1.tdf Line: 49
+Info (17036): Removed 5 MSB VCC or GND address nodes from RAM block "wb_sram:u_sram2|generic_sram_byte_en_w:u_sram|generic_sram_byte_en:ram|altsyncram:u_altram|altsyncram_jsn1:auto_generated|ALTSYNCRAM" File: C:/rundir/wb_stub_sys/synth/db/altsyncram_jsn1.tdf Line: 49
+Info (17036): Removed 5 MSB VCC or GND address nodes from RAM block "wb_sram:u_sram3|generic_sram_byte_en_w:u_sram|generic_sram_byte_en:ram|altsyncram:u_altram|altsyncram_jsn1:auto_generated|ALTSYNCRAM" File: C:/rundir/wb_stub_sys/synth/db/altsyncram_jsn1.tdf Line: 49
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 483 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 1 input pins
+    Info (21059): Implemented 4 output pins
+    Info (21061): Implemented 350 logic cells
+    Info (21064): Implemented 128 RAM segments
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 187 warnings
+    Info: Peak virtual memory: 716 megabytes
+    Info: Processing ended: Mon Aug 28 16:40:41 2017
+    Info: Elapsed time: 00:00:14
+    Info: Total CPU time (on all processors): 00:00:04
+touch wb_stub_sys.map
+quartus_fit wb_stub_sys
+Info: *******************************************************************
+Info: Running Quartus Prime Fitter
+    Info: Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
+    Info: Copyright (C) 2017  Intel Corporation. All rights reserved.
+    Info: Your use of Intel Corporation's design tools, logic functions 
+    Info: and other software and tools, and its AMPP partner logic 
+    Info: functions, and any output files from any of the foregoing 
+    Info: (including device programming or simulation files), and any 
+    Info: associated documentation or information are expressly subject 
+    Info: to the terms and conditions of the Intel Program License 
+    Info: Subscription Agreement, the Intel Quartus Prime License Agreement,
+    Info: the Intel MegaCore Function License Agreement, or other 
+    Info: applicable license agreement, including, without limitation, 
+    Info: that your use is for the sole purpose of programming logic 
+    Info: devices manufactured by Intel and sold by Intel or its 
+    Info: authorized distributors.  Please refer to the applicable 
+    Info: agreement for further details.
+    Info: Processing started: Mon Aug 28 16:40:42 2017
+Info: Command: quartus_fit wb_stub_sys
+Info: qfit2_default_script.tcl version: #1
+Info: Project  = wb_stub_sys
+Info: Revision = wb_stub_sys
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
+Info (119006): Selected device 5CSXFC6D6F31C8ES for design "wb_stub_sys"
+Info (21076): High junction temperature operating condition is not set. Assuming a default value of '85'.
+Info (21076): Low junction temperature operating condition is not set. Assuming a default value of '0'.
+Info (171004): Fitter is performing a Standard Fit compilation using maximum Fitter effort to optimize design performance
+Warning (292013): Feature LogicLock is only available with a valid subscription license. You can purchase a software subscription to gain full access to this feature.
+Warning (15714): Some pins have incomplete I/O assignments. Refer to the I/O Assignment Warnings report for details
+Info (176045): Design uses memory blocks. Violating setup or hold times of memory block address registers for either read or write operations could cause memory contents to be corrupted. Make sure that all memory block address registers meet the setup and hold time requirements.
+Info (184020): Starting Fitter periphery placement operations
+Info (11191): Automatically promoted 1 clock (1 global)
+    Info (11162): clk_i~inputCLKENA0 with 269 fanout uses global clock CLKCTRL_G12
+Info (184021): Fitter periphery placement operations ending: elapsed time is 00:00:00
+Info (176233): Starting register packing
+Info (176235): Finished register packing
+    Extra Info (176219): No registers were packed into other blocks
+Info (128000): Starting physical synthesis optimizations for speed
+Info (332104): Reading SDC File: 'wb_stub_sys.sdc'
+Info (332151): Clock uncertainty is not calculated until you update the timing netlist.
+Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
+Info (332129): Detected timing requirements -- optimizing circuit to achieve only the specified requirements
+Info (332111): Found 1 clocks
+    Info (332111):   Period   Clock Name
+    Info (332111): ======== ============
+    Info (332111):   20.000        clk_i
+Info (128002): Starting physical synthesis algorithm register retiming
+Info (128003): Physical synthesis algorithm register retiming complete: estimated slack improvement of 310 ps
+Info (128002): Starting physical synthesis algorithm combinational resynthesis using boolean division
+Info (128003): Physical synthesis algorithm combinational resynthesis using boolean division complete: estimated slack improvement of 0 ps
+Info (128002): Starting physical synthesis algorithm register retiming
+Info (128003): Physical synthesis algorithm register retiming complete: estimated slack improvement of 39 ps
+Info (128002): Starting physical synthesis algorithm combinational resynthesis using boolean division
+Info (128003): Physical synthesis algorithm combinational resynthesis using boolean division complete: estimated slack improvement of 0 ps
+Info (128001): Physical synthesis optimizations for speed complete: elapsed time is 00:00:03
+Info (176233): Starting register packing
+Info (176235): Finished register packing
+    Extra Info (176219): No registers were packed into other blocks
+Info (11798): Fitter preparation operations ending: elapsed time is 00:00:17
+Info (170189): Fitter placement preparation operations beginning
+Info (14951): The Fitter is using Advanced Physical Optimization.
+Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:07
+Info (170191): Fitter placement operations beginning
+Info (170137): Fitter placement was successful
+Info (170192): Fitter placement operations ending: elapsed time is 00:00:02
+Info (170193): Fitter routing operations beginning
+Info (170195): Router estimated average interconnect usage is 0% of the available device resources
+    Info (170196): Router estimated peak interconnect usage is 5% of the available device resources in the region that extends from location X0_Y0 to location X10_Y10
+Info (170194): Fitter routing operations ending: elapsed time is 00:00:08
+Info (11888): Total time spent on timing analysis during the Fitter is 1.40 seconds.
+Info (334003): Started post-fitting delay annotation
+Warning (334000): Timing characteristics of device 5CSXFC6D6F31C8ES are preliminary
+Info (334004): Delay annotation completed successfully
+Info (334003): Started post-fitting delay annotation
+Warning (334000): Timing characteristics of device 5CSXFC6D6F31C8ES are preliminary
+Info (334004): Delay annotation completed successfully
+Info (11801): Fitter post-fit operations ending: elapsed time is 00:00:05
+Info (144001): Generated suppressed messages file C:/rundir/wb_stub_sys/synth/output/wb_stub_sys.fit.smsg
+Info: Quartus Prime Fitter was successful. 0 errors, 5 warnings
+    Info: Peak virtual memory: 2159 megabytes
+    Info: Processing ended: Mon Aug 28 16:41:47 2017
+    Info: Elapsed time: 00:01:05
+    Info: Total CPU time (on all processors): 00:01:44
+touch wb_stub_sys.fit
+quartus_sta wb_stub_sys
+Info: *******************************************************************
+Info: Running Quartus Prime TimeQuest Timing Analyzer
+    Info: Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
+    Info: Copyright (C) 2017  Intel Corporation. All rights reserved.
+    Info: Your use of Intel Corporation's design tools, logic functions 
+    Info: and other software and tools, and its AMPP partner logic 
+    Info: functions, and any output files from any of the foregoing 
+    Info: (including device programming or simulation files), and any 
+    Info: associated documentation or information are expressly subject 
+    Info: to the terms and conditions of the Intel Program License 
+    Info: Subscription Agreement, the Intel Quartus Prime License Agreement,
+    Info: the Intel MegaCore Function License Agreement, or other 
+    Info: applicable license agreement, including, without limitation, 
+    Info: that your use is for the sole purpose of programming logic 
+    Info: devices manufactured by Intel and sold by Intel or its 
+    Info: authorized distributors.  Please refer to the applicable 
+    Info: agreement for further details.
+    Info: Processing started: Mon Aug 28 16:41:47 2017
+Info: Command: quartus_sta wb_stub_sys
+Info: qsta_default_script.tcl version: #1
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
+Info (21076): High junction temperature operating condition is not set. Assuming a default value of '85'.
+Info (21076): Low junction temperature operating condition is not set. Assuming a default value of '0'.
+Info (332104): Reading SDC File: 'wb_stub_sys.sdc'
+Info (332151): Clock uncertainty is not calculated until you update the timing netlist.
+Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
+Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info: Analyzing Slow 1100mV 85C Model
+Info (332146): Worst-case setup slack is 13.775
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    13.775               0.000 clk_i 
+Info (332146): Worst-case hold slack is 0.524
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.524               0.000 clk_i 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is 8.586
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     8.586               0.000 clk_i 
+Info: Analyzing Slow 1100mV 0C Model
+Info (334003): Started post-fitting delay annotation
+Warning (334000): Timing characteristics of device 5CSXFC6D6F31C8ES are preliminary
+Info (334004): Delay annotation completed successfully
+Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
+Info (332146): Worst-case setup slack is 13.805
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    13.805               0.000 clk_i 
+Info (332146): Worst-case hold slack is 0.500
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.500               0.000 clk_i 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is 8.528
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     8.528               0.000 clk_i 
+Info: Analyzing Fast 1100mV 85C Model
+Info (334003): Started post-fitting delay annotation
+Warning (334000): Timing characteristics of device 5CSXFC6D6F31C8ES are preliminary
+Info (334004): Delay annotation completed successfully
+Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
+Info (332146): Worst-case setup slack is 17.089
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    17.089               0.000 clk_i 
+Info (332146): Worst-case hold slack is 0.180
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.180               0.000 clk_i 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is 8.478
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     8.478               0.000 clk_i 
+Info: Analyzing Fast 1100mV 0C Model
+Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
+Info (332146): Worst-case setup slack is 17.393
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    17.393               0.000 clk_i 
+Info (332146): Worst-case hold slack is 0.170
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.170               0.000 clk_i 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is 8.435
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     8.435               0.000 clk_i 
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus Prime TimeQuest Timing Analyzer was successful. 0 errors, 3 warnings
+    Info: Peak virtual memory: 1065 megabytes
+    Info: Processing ended: Mon Aug 28 16:41:55 2017
+    Info: Elapsed time: 00:00:08
+    Info: Total CPU time (on all processors): 00:00:09
+touch wb_stub_sys.sta
+quartus_asm wb_stub_sys
+Info: *******************************************************************
+Info: Running Quartus Prime Assembler
+    Info: Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
+    Info: Copyright (C) 2017  Intel Corporation. All rights reserved.
+    Info: Your use of Intel Corporation's design tools, logic functions 
+    Info: and other software and tools, and its AMPP partner logic 
+    Info: functions, and any output files from any of the foregoing 
+    Info: (including device programming or simulation files), and any 
+    Info: associated documentation or information are expressly subject 
+    Info: to the terms and conditions of the Intel Program License 
+    Info: Subscription Agreement, the Intel Quartus Prime License Agreement,
+    Info: the Intel MegaCore Function License Agreement, or other 
+    Info: applicable license agreement, including, without limitation, 
+    Info: that your use is for the sole purpose of programming logic 
+    Info: devices manufactured by Intel and sold by Intel or its 
+    Info: authorized distributors.  Please refer to the applicable 
+    Info: agreement for further details.
+    Info: Processing started: Mon Aug 28 16:41:56 2017
+Info: Command: quartus_asm wb_stub_sys
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (115030): Assembler is generating device programming files
+Info: Quartus Prime Assembler was successful. 0 errors, 1 warning
+    Info: Peak virtual memory: 711 megabytes
+    Info: Processing ended: Mon Aug 28 16:42:03 2017
+    Info: Elapsed time: 00:00:07
+    Info: Total CPU time (on all processors): 00:00:07
+cp output/wb_stub_sys.sof wb_stub_sys.sof
+quartus_cpf -c wb_stub_sys.sof wb_stub_sys.rbf
+Info: *******************************************************************
+Info: Running Quartus Prime Convert_programming_file
+    Info: Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
+    Info: Copyright (C) 2017  Intel Corporation. All rights reserved.
+    Info: Your use of Intel Corporation's design tools, logic functions 
+    Info: and other software and tools, and its AMPP partner logic 
+    Info: functions, and any output files from any of the foregoing 
+    Info: (including device programming or simulation files), and any 
+    Info: associated documentation or information are expressly subject 
+    Info: to the terms and conditions of the Intel Program License 
+    Info: Subscription Agreement, the Intel Quartus Prime License Agreement,
+    Info: the Intel MegaCore Function License Agreement, or other 
+    Info: applicable license agreement, including, without limitation, 
+    Info: that your use is for the sole purpose of programming logic 
+    Info: devices manufactured by Intel and sold by Intel or its 
+    Info: authorized distributors.  Please refer to the applicable 
+    Info: agreement for further details.
+    Info: Processing started: Mon Aug 28 16:42:04 2017
+Info: Command: quartus_cpf -c wb_stub_sys.sof wb_stub_sys.rbf
+Info: Quartus Prime Convert_programming_file was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 307 megabytes
+    Info: Processing ended: Mon Aug 28 16:42:06 2017
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:02
+make: Leaving directory '/cygdrive/c/rundir/wb_stub_sys/synth'
