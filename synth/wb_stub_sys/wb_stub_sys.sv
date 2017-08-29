@@ -17,17 +17,65 @@ module wb_stub_sys(
 		output		led3
 		);
 
+//	reg clk;
 	wire clk = clk_i;
+	reg rstn_1 = 0;
+	reg[7:0] rstn_1_cnt = 0;
+	reg [15:0] clken_cnt = 0;
 	reg rstn = 0;
 	reg[7:0] rstn_cnt = 0;
 	
-	always @(posedge clk) begin
-		if (rstn_cnt == 10) begin
+	reg[3:0] led;
+	reg[31:0] s0_acc_cnt;
+	reg[31:0] s1_acc_cnt;
+	reg[31:0] s2_acc_cnt;
+	reg[31:0] s3_acc_cnt;
+	
+	assign led0 = led[0];
+	assign led1 = led[1];
+	assign led2 = led[2];
+	assign led3 = led[3];
+	
+	always @(posedge clk_i) begin
+		if (rstn_cnt == 100) begin
 			rstn <= 1;
 		end else begin
 			rstn_cnt <= rstn_cnt + 1;
 		end
 	end
+	
+//	always @(posedge clk_i) begin
+//		if (rstn_1_cnt == 100) begin
+//			rstn_1 <= 1;
+//		end else begin
+//			rstn_1_cnt <= rstn_1_cnt + 1;
+//		end
+//	end
+//
+//	localparam DIV = 25000;
+////	localparam DIV = 10;
+//	always @(posedge clk_i) begin
+//		if (rstn_1 == 0) begin
+//			clken_cnt <= 0;
+//			clk <= 0;
+//		end else begin
+//			if (clken_cnt == DIV) begin
+//				clken_cnt <= 0;
+//				clk <= ~clk;
+//			end else begin
+//				clken_cnt <= clken_cnt + 1;
+//			end
+//		end
+//	end
+//	
+//	always @(posedge clk) begin
+//		if (rstn_cnt == 10) begin
+//			rstn <= 1;
+//		end else begin
+//			rstn_cnt <= rstn_cnt + 1;
+//		end
+//	end
+	
 	
 	parameter WB_ADDR_WIDTH = 32;
 	parameter WB_DATA_WIDTH = 32;
@@ -119,7 +167,7 @@ module wb_stub_sys(
 
 `ifdef CHISEL_WB_IC
 	wishbone_ic_32_32_2x4 wishbone_ic_32_32_2x4 (
-		.clock            (clk_i           ), 
+		.clock            (clk           ), 
 		.reset            (!rstn           ), 
 		.io_addr_base_0   (io_addr_base_0  ), 
 		.io_addr_base_1   (io_addr_base_1  ), 
@@ -232,7 +280,7 @@ module wb_stub_sys(
 		.SLAVE3_ADDR_BASE   ('h0000_0300  ), 
 		.SLAVE3_ADDR_LIMIT  ('h0000_03FF )
 		) u_ic (
-		.clk                (clk_i               ), 
+		.clk                (clk               ), 
 		.rstn               (rstn              ), 
 		.m0                 (m02ic.slave           ), 
 		.m1                 (m12ic.slave                ), 
@@ -243,10 +291,55 @@ module wb_stub_sys(
 		
 `endif
 	
-	assign led0 = (ic2s0.CYC & ^ic2s0.DAT_R);
-	assign led1 = (ic2s1.CYC & ^ic2s1.DAT_R);
-	assign led2 = (ic2s2.CYC & ^ic2s2.DAT_R);
-	assign led3 = (ic2s3.CYC & ^ic2s3.DAT_R);
+//	localparam CNT_BIT = 4;
+	localparam CNT_BIT = 13;
+
+	always @(posedge clk) begin
+		if (rstn == 0) begin
+			led <= 0; 
+			s0_acc_cnt <= 0;
+			s1_acc_cnt <= 0;
+			s2_acc_cnt <= 0;
+			s3_acc_cnt <= 0;
+		end else begin
+			if (ic2s0.CYC && ic2s0.ACK) begin
+				if (s0_acc_cnt[CNT_BIT]) begin
+					led[0] <= ~led[0];
+					s0_acc_cnt <= 0;
+				end else begin
+					s0_acc_cnt <= s0_acc_cnt+1;
+				end
+			end
+			if (ic2s1.CYC && ic2s1.ACK) begin
+				if (s1_acc_cnt[CNT_BIT]) begin
+					led[1] <= ~led[1];
+					s1_acc_cnt <= 0;
+				end else begin
+					s1_acc_cnt <= s1_acc_cnt+1;
+				end
+			end
+			if (ic2s2.CYC && ic2s2.ACK) begin
+				if (s2_acc_cnt[CNT_BIT]) begin
+					led[2] <= ~led[2];
+					s2_acc_cnt <= 0;
+				end else begin
+					s2_acc_cnt <= s2_acc_cnt+1;
+				end
+			end
+			if (ic2s3.CYC && ic2s3.ACK) begin
+				if (s3_acc_cnt[CNT_BIT]) begin
+					led[3] <= ~led[3];
+					s3_acc_cnt <= 0;
+				end else begin
+					s3_acc_cnt <= s3_acc_cnt+1;
+				end
+			end
+		end
+	end
+//	assign led0 = (ic2s0.CYC & ^ic2s0.DAT_R);
+//	assign led1 = (ic2s1.CYC & ^ic2s1.DAT_R);
+//	assign led2 = (ic2s2.CYC & ^ic2s2.DAT_R);
+//	assign led3 = (ic2s3.CYC & ^ic2s3.DAT_R);
 	
 	wb_sram #(
 			.MEM_ADDR_BITS     (14    ), 

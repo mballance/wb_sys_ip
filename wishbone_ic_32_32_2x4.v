@@ -78,25 +78,23 @@ module LockingRRArbiter(
   wire [2:0] _GEN_9_bits_CTI;
   wire  _GEN_10_bits_TGA;
   wire [31:0] _GEN_11_bits_ADR;
-  reg  value;
-  reg [31:0] _RAND_0;
   reg  _T_62;
+  reg [31:0] _RAND_0;
+  reg  _T_65;
   reg [31:0] _RAND_1;
-  wire  _T_65;
-  wire  _T_66;
   wire  _T_67;
-  wire [1:0] _T_71;
-  wire  _T_72;
   wire  _GEN_25;
   wire  _GEN_26;
+  wire  _T_70;
   wire  _GEN_27;
+  wire  _GEN_28;
   reg  lastGrant;
   reg [31:0] _RAND_2;
-  wire  _GEN_28;
+  wire  _GEN_29;
   wire  grantMask_1;
   wire  validMask_1;
-  wire  _GEN_29;
   wire  _GEN_30;
+  wire  _GEN_31;
   assign io_out_valid = _GEN_0_valid;
   assign io_out_bits_ADR = _GEN_11_bits_ADR;
   assign io_out_bits_TGA = _GEN_10_bits_TGA;
@@ -109,8 +107,8 @@ module LockingRRArbiter(
   assign io_out_bits_SEL = _GEN_3_bits_SEL;
   assign io_out_bits_STB = _GEN_2_bits_STB;
   assign io_out_bits_WE = _GEN_1_bits_WE;
-  assign io_chosen = _GEN_27;
-  assign choice = _GEN_30;
+  assign io_chosen = _GEN_28;
+  assign choice = _GEN_31;
   assign _GEN_0_valid = _GEN_13;
   assign _GEN_13 = io_chosen ? io_in_1_valid : io_in_0_valid;
   assign _GEN_14 = io_chosen ? io_in_1_bits_ADR : io_in_0_bits_ADR;
@@ -135,19 +133,17 @@ module LockingRRArbiter(
   assign _GEN_9_bits_CTI = _GEN_16;
   assign _GEN_10_bits_TGA = _GEN_15;
   assign _GEN_11_bits_ADR = _GEN_14;
-  assign _T_65 = io_out_bits_CYC & io_out_bits_STB;
-  assign _T_66 = io_out_ready & io_out_valid;
-  assign _T_67 = _T_66 & _T_65;
-  assign _T_71 = value + 1'h1;
-  assign _T_72 = _T_71[0:0];
-  assign _GEN_25 = _T_67 ? io_chosen : _T_62;
-  assign _GEN_26 = _T_67 ? _T_72 : value;
-  assign _GEN_27 = value ? _T_62 : choice;
-  assign _GEN_28 = _T_66 ? io_chosen : lastGrant;
+  assign _T_67 = io_out_ready & io_out_valid;
+  assign _GEN_25 = _T_67 ? 1'h1 : _T_65;
+  assign _GEN_26 = _T_67 ? io_chosen : _T_62;
+  assign _T_70 = _T_67 == 1'h0;
+  assign _GEN_27 = _T_70 ? 1'h0 : _GEN_25;
+  assign _GEN_28 = _T_65 ? _T_62 : choice;
+  assign _GEN_29 = _T_67 ? io_chosen : lastGrant;
   assign grantMask_1 = 1'h1 > lastGrant;
   assign validMask_1 = io_in_1_valid & grantMask_1;
-  assign _GEN_29 = io_in_0_valid ? 1'h0 : 1'h1;
-  assign _GEN_30 = validMask_1 ? 1'h1 : _GEN_29;
+  assign _GEN_30 = io_in_0_valid ? 1'h0 : 1'h1;
+  assign _GEN_31 = validMask_1 ? 1'h1 : _GEN_30;
 `ifdef RANDOMIZE
   integer initvar;
   initial begin
@@ -156,11 +152,11 @@ module LockingRRArbiter(
     `endif
   `ifdef RANDOMIZE_REG_INIT
   _RAND_0 = {1{$random}};
-  value = _RAND_0[0:0];
+  _T_62 = _RAND_0[0:0];
   `endif // RANDOMIZE_REG_INIT
   `ifdef RANDOMIZE_REG_INIT
   _RAND_1 = {1{$random}};
-  _T_62 = _RAND_1[0:0];
+  _T_65 = _RAND_1[0:0];
   `endif // RANDOMIZE_REG_INIT
   `ifdef RANDOMIZE_REG_INIT
   _RAND_2 = {1{$random}};
@@ -169,20 +165,24 @@ module LockingRRArbiter(
   end
 `endif // RANDOMIZE
   always @(posedge clock) begin
-    if (reset) begin
-      value <= 1'h0;
-    end else begin
-      if (_T_67) begin
-        value <= _T_72;
-      end
-    end
     if (_T_67) begin
       _T_62 <= io_chosen;
     end
     if (reset) begin
+      _T_65 <= 1'h0;
+    end else begin
+      if (_T_70) begin
+        _T_65 <= 1'h0;
+      end else begin
+        if (_T_67) begin
+          _T_65 <= 1'h1;
+        end
+      end
+    end
+    if (reset) begin
       lastGrant <= 1'h0;
     end else begin
-      if (_T_66) begin
+      if (_T_67) begin
         lastGrant <= io_chosen;
       end
     end

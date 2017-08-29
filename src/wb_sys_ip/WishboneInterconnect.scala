@@ -28,7 +28,7 @@ class WishboneInterconnect(
   val out_arb = Seq.fill(p.N_SLAVES) ( Module(new LockingRRArbiter(
       new WishboneReqData(p.wb_p), 
       p.N_MASTERS, 
-      2, 
+      10000, 
       Some((p : WishboneReqData) => {
         (p.CYC && p.STB)
       }) )))
@@ -101,15 +101,24 @@ abstract class LockingArbiterLike[T <: Data](gen: T, n: Int, count: Int, needsLo
   if (count > 1) {
     val lockCount = Counter(count)
     val lockIdx = Reg(UInt())
-    val locked = lockCount.value =/= 0.U
+    val locked = RegInit(Bool(), Bool(false)) // lockCount.value =/= 0.U
     val wantsLock = needsLock.map(_(io.out.bits)).getOrElse(true.B)
 
-    when (io.out.fire() && wantsLock) {
+    when (io.out.fire()) {
+      locked := Bool(true)
       lockIdx := io.chosen
-      lockCount.inc()
+//      when (wantsLock) {
+//        lockIdx := io.chosen
+//      } .otherwise {
+//        locked := Bool(false)
+//      }
+//      lockCount.inc()
+    } .otherwise {
+      locked := Bool(false)
     }
 
     when (locked) { io.chosen := lockIdx }
+    
     for ((in, (g, i)) <- io.in zip grant.zipWithIndex)
       in.ready := Mux(locked, lockIdx === i.asUInt, g) && io.out.ready
   } else {

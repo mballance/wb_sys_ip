@@ -43,8 +43,8 @@ class WishboneTestMaster(
   val DAT_W = RegInit(UInt(p.wb_p.DATA_WIDTH.W), 1.asUInt())
   val DAT_LAST_R = RegInit(UInt(p.wb_p.DATA_WIDTH.W), 1.asUInt())
   
-  io.m.STB := (reqState === sADDR_REQ || reqState === sWAIT_ACK)
-  io.m.CYC := (reqState === sADDR_REQ || reqState === sWAIT_ACK)
+  io.m.STB := ((reqState === sADDR_REQ || reqState === sWAIT_ACK) && reset === Bool(false))
+  io.m.CYC := ((reqState === sADDR_REQ || reqState === sWAIT_ACK) && reset === Bool(false)) 
   
   val inc = (reqState === sADDR_REQ)
   val rand_gen = LFSR16(inc);
