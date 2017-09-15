@@ -18,3 +18,11 @@
 	path = synthscripts
 	url = https://github.com/mballance/synthscripts.git
 	branch = master
+[submodule "chisellib"]
+	path = chisellib
+	url = https://github.com/mballance/chisellib.git
+	branch = master
+[submodule "chiselscripts"]
+	path = chiselscripts
+	url = https://github.com/mballance/chiselscripts.git
+	branch = master

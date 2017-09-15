@@ -20,7 +20,7 @@
 -f ${SV_BFMS}/wb/uvm/uvm.f
 -f ${SV_BFMS}/wb/wb.f
 
-${WB_SYS_IP}/wishbone_ic_32_32_2x4.v
+${BUILD_DIR_A}/wishbone_ic_32_32_2x4.v
 
 ${SIM_DIR_A}/../tb/wb_ic_env_pkg.sv
 
