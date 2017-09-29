@@ -42,7 +42,7 @@ class WishboneInterconnect(
       val s = Vec(p.N_SLAVES, new Wishbone(p.wb_p))
   });
     
-//  override def desiredName() : String = typename;
+  override def desiredName() : String = typename;
   
   val out_arb = Seq.fill(p.N_SLAVES) (Module(new LockingRRArbiter(
       new Wishbone.ReqData(p.wb_p),
@@ -77,7 +77,7 @@ class WishboneInterconnect(
     when (io.m(i).req.CYC && io.m(i).req.STB) {
       when (slave_req.reduceLeft(_ | _) === Bool(true)) {
         // Drive the master response with a priority mux
-        Mux1H(in_rsp_e, in_rsp_s).assign_b2(io.m(i).rsp)
+        io.m(i).rsp <> Mux1H(in_rsp_e, in_rsp_s) // .assign_b2(io.m(i).rsp)
       } .otherwise {
         io.m(i).rsp.set_error()
       }
@@ -96,7 +96,8 @@ class WishboneInterconnect(
 
       // Drive the slave request signals from the slave-arbiter output
       when (out_arb(j).io.in.map((f) => f.valid).reduceLeft(_|_)) {
-        out_arb(j).io.out.bits.assign_b2(io.s(j).req)
+//        out_arb(j).io.out.bits.assign_b2(io.s(j).req)
+        io.s(j).req <> out_arb(j).io.out.bits
       } .otherwise {
         // If no master is requesting, deactivate the slave requests
         io.s(j).req.park()

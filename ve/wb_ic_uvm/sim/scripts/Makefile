@@ -6,7 +6,7 @@ TB=wb_ic_tb
 MK_INCLUDES += $(WB_SYS_IP)/rules_defs.mk
 MK_INCLUDES += $(WB_SYS_IP)/std_protocol_if/rules_defs.mk
 MK_INCLUDES += $(WB_SYS_IP)/chisellib/rules_defs.mk
-MK_INCLUDES += $(WB_SYS_IP)/chiselscripts/mkfiles/rules_defs.mk
+MK_INCLUDES += $(WB_SYS_IP)/chiselscripts/mkfiles/chiselscripts.mk
 
 BUILD_PRECOMPILE_TARGETS += $(foreach s,2 3 4, wishbone_ic_32_32_2x$(s).v)
 # BUILD_PRECOMPILE_TARGETS += wishbone_ic_32_32_2x4.v
