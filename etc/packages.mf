@@ -1,0 +1,8 @@
+#	.gitmodules
+chisellib@https://github.com/mballance/chisellib.git
+memory_primitives@https://github.com/mballance/memory_primitives.git
+simscripts@https://github.com/mballance/simscripts.git
+std_protocol_if@https://github.com/mballance/std_protocol_if.git
+synthscripts@/https://github.com/mballance/synthscripts.git
+chiselscripts@https://github.com/mballance/chiselscripts/releases/download/v0.0.1/chiselscripts-0.0.1.tar.gz
+
