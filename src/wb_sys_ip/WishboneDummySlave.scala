@@ -18,5 +18,6 @@ class WishboneDummySlave(
   io.s.rsp.ACK := ack
   io.s.rsp.DAT_R := 0.asUInt()
   io.s.rsp.ERR := 0.asUInt();
+  io.s.rsp.TGD_R := 0.asUInt()
   
 }

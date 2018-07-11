@@ -21,7 +21,7 @@ class WishboneWide2Narrow(
   io.o.req.CTI := io.i.req.CTI
   io.o.req.CYC := io.i.req.CYC
   // TODO: assume 64 to 32 for now
-  when (io.i.req.SEL(3,0) != 0.asUInt()) {
+  when (io.i.req.SEL(3,0) =/= 0.asUInt()) {
     io.o.req.DAT_W := io.i.req.DAT_W(31,0)
     io.o.req.SEL := io.i.req.SEL(3,0)
   } .otherwise {
@@ -36,6 +36,7 @@ class WishboneWide2Narrow(
 
   io.i.rsp.ACK := io.o.rsp.ACK
   io.i.rsp.ERR := io.o.rsp.ERR
+  io.i.rsp.TGD_R := io.o.rsp.TGD_R
 //  io.i.rsp.DAT_R(63,32) := io.o.rsp.DAT_R
   io.i.rsp.DAT_R := Cat(io.o.rsp.DAT_R, io.o.rsp.DAT_R)
 //  io.i.rsp.DAT_R(31,0) := io.o.rsp.DAT_R(31,0)
