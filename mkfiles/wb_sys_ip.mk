@@ -2,6 +2,9 @@
 WB_SYS_IP_MKFILES_DIR := $(dir $(lastword $(MAKEFILE_LIST)))
 WB_SYS_IP_DIR := $(abspath $(WB_SYS_IP_MKFILES_DIR)/..)
 
+WB_SYS_IP := $(WB_SYS_IP_DIR)
+export WB_SYS_IP
+
 ifneq (1,$(RULES))
 
 WB_SYS_IP_JAR := $(WB_SYS_IP_DIR)/lib/wb_sys_ip_lib.jar
