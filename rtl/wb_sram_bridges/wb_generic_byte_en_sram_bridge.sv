@@ -17,26 +17,24 @@ module wb_generic_byte_en_sram_bridge #(
 			generic_sram_byte_en_if.sram_client		sram_m
 		);
 	
-	reg req, req_1;
+	reg[1:0] state = 0;
 
 	always @(posedge clk) begin
 		if (rstn == 0) begin
-			req <= 0;
-			req_1 <= 0;
+			state <= 0;
 		end else begin
-			if (req) begin
-				req <= 0;
-			end else 
-			if (wb_s.CYC && wb_s.STB && !req) begin
-				req <= 1;
-			end else begin
-				req <= 0;
-			end
-			req_1 <= req;
-			
-//			if (wb_s.CYC && wb_s.WE && wb_s.STB) begin
-//				$display("Cycle: %08h", wb_s.ADR);
-//			end
+			case (state)
+				0:
+					if (wb_s.CYC && wb_s.STB) begin
+						state <= 1;
+					end
+				1:
+					state <= 2;
+				2:
+					state <= 0;
+				default:
+					state <= 0;
+			endcase
 		end
 	end
 	
@@ -55,7 +53,8 @@ module wb_generic_byte_en_sram_bridge #(
 	assign sram_m.write_data = wb_s.DAT_W;
 	assign wb_s.DAT_R = sram_m.read_data;
 
-	assign wb_s.ACK = (sram_m.read_en)?req_1:req;
+//	assign wb_s.ACK = (sram_m.read_en)?req_1:req;
+	assign wb_s.ACK = (state == 2);
 	assign wb_s.ERR = 0; // no errors
 	
 	assign wb_s.TGD_R = 0;
