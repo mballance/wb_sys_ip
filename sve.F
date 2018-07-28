@@ -5,13 +5,11 @@
 +incdir+${UVM_HOME}/src
 ${UVM_HOME}/src/uvm_pkg.sv 
 
--f ./rtl/rtl.f
-
--f ./std_protocol_if/rtl/rtl.f
+-F ${STD_PROTOCOL_IF}/sve.F
 -F ./ve/wb_ic_uvm/sve.F
 -F ./ve/wb_test_master_uvm/sve.F
 -F ./ve/wb_stub_sys_uvm/sve.F
--f ./ve/sv_bfms/sve.f
+-F ${SV_BFMS}/sve.f
 -f ./rtl/rtl.f
 
 ./synth/wb_stub_sys/wb_stub_sys.sv
