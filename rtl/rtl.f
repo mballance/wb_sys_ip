@@ -44,6 +44,7 @@ ${WB_SYS_IP}/rtl/interconnects/wb_interconnect_4x8_pt.sv
 ${WB_SYS_IP}/rtl/interconnects/wb_interconnect_NxN.sv
 ${WB_SYS_IP}/rtl/wb_rom/wb_rom.sv
 ${WB_SYS_IP}/rtl/wb_sram/wb_sram.sv
+${WB_SYS_IP}/rtl/wb_sram/wb_sram_w.sv
 ${WB_SYS_IP}/rtl/wb_sram_bridges/wb_generic_byte_en_sram_bridge.sv
 ${WB_SYS_IP}/rtl/wb_sram_bridges/wb_generic_line_en_sram_bridge.sv
 
