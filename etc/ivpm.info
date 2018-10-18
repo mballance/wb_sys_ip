@@ -1,3 +1,4 @@
 name=wb_sys_ip
 version=0.0.1
+rootvar=WB_SYS_IP
 
